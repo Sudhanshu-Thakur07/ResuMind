@@ -83,6 +83,12 @@ Powered by **Groq Cloud's ultra-fast LLM inference (`qwen/qwen3.8-27b`)**, **Qdr
                         └─────────────────────────────────┘
 ```
 
+## Project Demo Video 
+
+
+https://github.com/user-attachments/assets/ac3d3d2d-88f8-4475-ad74-a0871a04020a
+
+
 ---
 
 ## 🌟 Key Features
