@@ -1,21 +1,42 @@
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from pypdf import PdfReader
+import io
 import json
-from pathlib import Path
+from backend.services.resume_analysis import analyze_resume
+from backend.services.role_recommendation import generate_other_roles
+from backend.services.roadmap import generate_roadmap
+from backend.setup_vector_db import create_db
+from backend.config import qdrant_client,COLLECTION_NAME
+from backend.schemas import JobDescription,jd_response_format
 
-from config import qdrant_client, COLLECTION_NAME
-from services.resume_analysis import analyze_resume
-from services.role_recommendation import generate_other_roles
-from services.roadmap import generate_roadmap
-from services.interview_questions import get_interview_questions
-from setup_vector_db import create_db
+
+app = FastAPI()
+
+# global variables
+
+resume_content = ""
+role_selection = ""
+custom_jd=None
+
+
+''' HELPER FUNCTION'''
+
+def get_target():
+    if role_selection:
+        return {"role_selection": role_selection}
+    elif custom_jd is not None:
+        return {"custom_jd": custom_jd.model_dump_json(indent=2)}
+
+    raise HTTPException(
+        status_code=400,
+        detail="Select a role or upload a custom JD"
+    )
 
 
 # -----------------------------
 # VECTOR DB VALIDATION
 # -----------------------------
 
-print("=" * 60)
-print("  RAG AI Resume Analyzer")
-print("=" * 60)
 
 print("\n[Step 1/2] Checking vector database...")
 
@@ -31,131 +52,119 @@ print(f"  Vector DB ready — {vector_count} knowledge chunks loaded.")
 
 
 # -----------------------------
-# ROLE SELECTION (INTERACTIVE)
+# ENDPOINTS
 # -----------------------------
 
-print("\n[Step 2/2] Role Selection")
+''' HOME/DEFAULT '''
 
-# Load roles from data/ folder
-roles_path = Path(__file__).parent.parent / "data" / "available_roles.json"
-
-with open(roles_path, "r") as fh:
-    available_roles = json.load(fh)
-
-sorted_roles = sorted(available_roles["roles"])
-
-print("\n  Available Roles:")
-print("  " + "-" * 40)
-for i, role in enumerate(sorted_roles, start=1):
-    print(f"  {i:>2}. {role.title()}")
-print("  " + "-" * 40)
-
-role_input = None
-
-while True:
-    print("\n  You can enter:")
-    print("    - A number (e.g. 3) to pick from the list above")
-    print("    - The role name directly (e.g. data scientist)")
-
-    user_input = input("\n  Your choice: ").strip().lower()
-
-    # Check if user entered a number
-    if user_input.isdigit():
-        index = int(user_input) - 1
-        if 0 <= index < len(sorted_roles):
-            role_input = sorted_roles[index]
-            print(f"\n  Selected role: {role_input.title()}")
-            break
-        else:
-            print(f"\n  Invalid number. Please enter a number between 1 and {len(sorted_roles)}.")
-    # Check if user entered a role name
-    elif user_input in available_roles["roles"]:
-        role_input = user_input
-        print(f"\n  Selected role: {role_input.title()}")
-        break
-    else:
-        print(f"\n  '{user_input}' is not a valid role or number.")
-        print("  Please try again.")
+@app.get("/")
+def home():
+    return{"Description":"ResuMind — RAG-Powered Resume Intelligence & Job Fit Analysis"}
 
 
-# -----------------------------
-# RESUME + JD + MATCH ANALYSIS
-# -----------------------------
+''' PDF UPLOAD '''
 
-print("\n" + "=" * 60)
-print("  Analyzing your resume... (this may take a moment)")
-print("=" * 60)
+@app.post("/upload-pdf")
+async def upload_pdf(file: UploadFile = File(...)):
 
-result = analyze_resume(role_input)
+    if file.content_type != "application/pdf":
+        raise HTTPException(status_code=400, detail="Only PDF files are allowed")
 
-resume_extract = result["resume_extract"]
+    pdf_bytes = await file.read()
 
-match_data = json.loads(
-    result["match_answer"]
-)
+    reader = PdfReader(io.BytesIO(pdf_bytes))
 
+    global resume_content
 
-print("\nMatch Percentage:")
-print(match_data["match_percent"])
+    for page in reader.pages:
+        resume_content += page.extract_text() or ""
 
-print("\nMissing Skills:")
-for skill in match_data["missing_skills"]:
-    print("-", skill)
+    if not resume_content.strip():
+        raise HTTPException(status_code=422, detail="The Uploaded PDF does not contain usable content.")
 
-print("\nAnalysis:")
-print(match_data["short_analysis"])
+    # Lightweight check: does the content look like a resume?
+    resume_keywords = [
+        "education", "experience", "skills", "projects", "work",
+        "university", "college", "degree", "certification",
+        "internship", "objective", "summary", "responsibilities",
+        "achievements", "proficiency", "portfolio", "linkedin",
+        "github", "resume", "curriculum vitae", "gpa",
+    ]
+    content_lower = resume_content.lower()
+    matched = sum(1 for kw in resume_keywords if kw in content_lower)
 
+    if matched < 3:
+        resume_content = ""  # reset so a valid resume can be re-uploaded
+        raise HTTPException(
+            status_code=422,
+            detail="The uploaded PDF does not appear to be a resume. Please upload a valid resume PDF."
+        )
 
-# -----------------------------
-# OTHER ROLES
-# -----------------------------
-
-other_roles_data = generate_other_roles(
-    resume_extract,
-    role_input
-)
-
-print("\nOther Roles:")
-
-for role in other_roles_data["roles"]:
-    print("-", role)
-
-
-# -----------------------------
-# ROADMAP
-# -----------------------------
-
-roadmap_data = generate_roadmap(
-    match_data["missing_skills"]
-)
-
-print("\nLearning Path:")
-
-for item in roadmap_data["learning_path"]:
-    print("-", item)
-
-print("\nStudy Resources:")
-
-for resource in roadmap_data["study_resources"]:
-    print("-", resource)
-
-print("\nRecommended Projects:")
-
-for project in roadmap_data["recommended_projects"]:
-    print("-", project)
-
-print("\nRoadmap:")
-
-for step in roadmap_data["roadmap"]:
-    print("-", step)
+    return {
+        "Status": "resume uploaded successfully"
+    }
 
 
-# interview ques feature 
+''' ROLE SELECTION '''
 
-interview_questions = get_interview_questions(
-    role_input,
-    top_k=10
-)
+@app.post("/role-select")
+def select_role(role:str):
+    global role_selection, custom_jd
+    role_selection=role
+    custom_jd=None          # clear JD so role takes priority
+    return{
+        "status":"Role added successfully"
+    }
 
-print("\nInterview Questions:")
-print(interview_questions)
+
+''' CUSTOMISABLE JD '''
+
+@app.post("/upload-jd")
+def jd_upload(job_description:JobDescription) ->dict :
+
+    global custom_jd, role_selection
+    custom_jd=job_description
+    role_selection=""        # clear role so JD takes priority
+    return{"status":"Custom JD is uploaded successfully"}
+
+
+''' ANALYZE '''
+
+@app.get("/analyze")
+def analyze():
+    if not resume_content.strip():
+        raise HTTPException(status_code=400, detail="Upload a resume first")
+    
+    target = get_target()
+    return analyze_resume(resume_content=resume_content, **target)
+
+
+''' ROLES RECCOMANDATION '''
+
+@app.get("/reccomanded-roles")
+def other_roles():
+    target = get_target()
+    role = target.get("role_selection") or (custom_jd.role if custom_jd else "")
+    return generate_other_roles(resume_content, role)
+
+''' ROADMAP '''
+
+@app.get("/roadmap")
+def roadmap():
+    target = get_target()
+    analysis = analyze_resume(resume_content=resume_content, **target)
+    match_data = json.loads(analysis["match_answer"])
+    roadmap = generate_roadmap(match_data["missing_skills"])
+    return roadmap
+
+
+
+
+
+
+ 
+
+
+
+
+    

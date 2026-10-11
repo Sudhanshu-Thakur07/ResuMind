@@ -1,402 +1,397 @@
-# 🤖 RAG AI Resume Analyzer
+# 🤖 ResuMind — RAG AI Resume Analyzer & Job Fit Intelligence
 
-A **RAG-powered (Retrieval-Augmented Generation)** command-line tool that analyzes your resume against real job descriptions, gives you a match percentage, identifies skill gaps, generates a personalized learning roadmap, recommends alternate roles, and generates interview questions — all powered by **Groq LLM (Qwen 3.8-27B)** and **Qdrant Vector Database**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python Version" />
+  <img src="https://img.shields.io/badge/FastAPI-0.141-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Groq%20LLM-Qwen%203.8--27B-f55036?style=for-the-badge&logo=fastapi&logoColor=white" alt="Groq" />
+  <img src="https://img.shields.io/badge/Qdrant-Vector%20Cloud-DC2626?style=for-the-badge&logo=qdrant&logoColor=white" alt="Qdrant" />
+  <img src="https://img.shields.io/badge/Embeddings-BAAI%2Fbge--small--en-purple?style=for-the-badge" alt="FastEmbed" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+</p>
 
----
-
-## 🧠 How It Works
-
-```
-Your Resume (PDF)
-      │
-      ▼
-  PDF Parser  ──►  Resume Extraction (LLM)
-                          │
-                          ▼
-       Qdrant Vector DB  ──►  Job Description Retrieval (RAG)
-                          │
-                          ▼
-                   LLM Match Analysis
-                          │
-              ┌───────────┼───────────────┐
-              ▼           ▼               ▼
-      Match % & Gaps  Roadmap     Interview Questions
-              │           │               │
-              └───────────┴───────────────┘
-                          │
-                          ▼
-                   CLI Output 🖥️
-```
+<p align="center">
+  <a href="https://www.linkedin.com/in/sudhanshu-thakur07/">
+    <img src="https://img.shields.io/badge/LinkedIn-Sudhanshu%20Thakur-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/Sudhanshu-Thakur07/RAG-Ai-Resume-Analyzer">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
+  </a>
+</p>
 
 ---
 
-## 📁 Project Structure
+## 📌 Overview
+
+**ResuMind** is a production-ready **Retrieval-Augmented Generation (RAG)** resume intelligence platform designed to evaluate job candidate fit with semantic depth rather than simple keyword tallying. 
+
+Upload any resume in PDF format, select from **15 pre-configured tech roles** (or supply a custom Job Description), and receive:
+- 🎯 **Semantic Match Score** (interactive circular ring)
+- ⚠️ **Missing Skills Gap Analysis**
+- 📝 **Detailed Strengths & Fit Evaluation**
+- 🧭 **Alternative Role Recommendations**
+- 🗺️ **Personalized Step-by-Step Learning Roadmap** to fill missing technical gaps
+
+Powered by **Groq Cloud's ultra-fast LLM inference (`qwen/qwen3.8-27b`)**, **Qdrant Vector Database**, and **FastEmbed (`BAAI/bge-small-en-v1.5`)**, delivered through an animated **glassmorphic dark UI**.
+
+---
+
+## 🧠 System Architecture & Workflow
+
+```
+   ┌──────────────────────────┐
+   │     User Resume (PDF)    │
+   └─────────────┬────────────┘
+                 │
+                 ▼
+   ┌──────────────────────────┐
+   │    PyPDF Text Parsing    │
+   └─────────────┬────────────┘
+                 │
+                 ▼
+   ┌──────────────────────────┐
+   │ Resume Heuristic Check   │ ──► [Non-resume rejected with 422 error]
+   └─────────────┬────────────┘
+                 │ (Validated)
+                 ▼
+   ┌──────────────────────────┐      Semantic Vector Search (Top-K)
+   │ FastEmbed (bge-small-en) │ ───────────────────────────────────────┐
+   └─────────────┬────────────┘                                        │
+                 │                                                     ▼
+                 │                                        ┌─────────────────────────┐
+                 │                                        │  Qdrant Vector Database │
+                 │                                        │ (15 Pre-loaded Role JDs)│
+                 ▼                                        └────────────┬────────────┘
+   ┌──────────────────────────┐                                        │
+   │  Groq LLM (Qwen-27B)     │ ◄──────────────────────────────────────┘
+   │  - Semantic Extraction   │       Retrieved Role Knowledge / Custom JD
+   │  - Multi-factor Matching │
+   └─────────────┬────────────┘
+                 │
+                 ├────────────────────────┬────────────────────────┐
+                 ▼                        ▼                        ▼
+        ┌──────────────────┐    ┌──────────────────┐    ┌─────────────────────┐
+        │  Match Score &   │    │  Alternate Role  │    │ Personalized Gap    │
+        │  Missing Skills  │    │  Recommendations │    │ Learning Roadmap    │
+        └────────┬─────────┘    └────────┬─────────┘    └──────────┬──────────┘
+                 │                       │                         │
+                 └───────────────────────┼─────────────────────────┘
+                                         ▼
+                        ┌─────────────────────────────────┐
+                        │   ResuMind Dark Glassmorphic    │
+                        │    Web Application Interface    │
+                        │   (http://127.0.0.1:8000/app/)  │
+                        └─────────────────────────────────┘
+```
+
+---
+
+## 🌟 Key Features
+
+| Feature | Description |
+|---|---|
+| **📄 Smart Resume Validation** | PyPDF parser checks content depth and structural resume keywords (education, skills, experience) to block invalid files. |
+| **🔍 Semantic RAG Retrieval** | FastEmbed generates dense embeddings; Qdrant retrieves top-15 relevant role chunks based on semantic meaning. |
+| **🤖 Groq LLM Reasoning** | Uses high-throughput Qwen 3.8-27B to evaluate skills conceptually rather than naive exact-keyword matching. |
+| **🎯 Dual Target Mode** | Choose from **15 curated technology roles** or supply a custom job description with custom experience and required skills. |
+| **📊 Visual Score Dashboard** | Animated circular SVG match-score indicator and categorized missing skills chips. |
+| **🧭 Career Role Pivot** | Analyzes candidate strengths to recommend adjacent tech roles that fit their profile. |
+| **🗺️ Gap-Closing Roadmap** | Generates an actionable, ordered learning roadmap tailored precisely to your missing skills. |
+| **🌐 Unified Single Server** | FastAPI serves both backend REST endpoints and frontend static assets on a single port without CORS hassle. |
+
+---
+
+## 📁 Repository File Structure
 
 ```
 RAG-Ai-Resume-Analyzer-main/
 │
-├── backend/                        # Main application code
-│   ├── main.py                     # ✅ Entry point — run this! (auto-initializes vector DB)
-│   ├── setup_vector_db.py          # ⚙️  Contains `create_db()` function for Qdrant vector database setup
-│   ├── config.py                   # App configuration & API clients
-│   ├── schemas.py                  # Pydantic data models
-│   └── services/
-│       ├── resume_analysis.py      # Resume parsing & JD matching
-│       ├── role_recommendation.py  # Suggests alternate roles
-│       ├── roadmap.py              # Generates skill roadmap
-│       ├── interview_questions.py  # Fetches interview questions
-│       ├── llm_service.py          # Groq LLM calls
-│       └── qdrant_service.py       # Vector search logic
+├── backend/                             # ⚡ FastAPI Backend Application
+│   ├── config.py                        # Environment loading, Groq & Qdrant client setup
+│   ├── cors_app.py                      # 🌐 CORS wrapper & Frontend Static File Server
+│   ├── main.py                          # 🚀 Core API endpoints & PDF validation logic
+│   ├── schemas.py                       # 📋 Pydantic schemas for structured JSON output
+│   ├── setup_vector_db.py               # ⚙️ Auto-vectorization & Qdrant collection seeder
+│   └── services/                        # 🧠 AI & DB Business Logic Services
+│       ├── llm_service.py               # Groq LLM prompt execution & JSON extraction
+│       ├── qdrant_service.py            # Vector search query & context extraction
+│       ├── resume_analysis.py           # Core RAG matching & gap evaluation engine
+│       ├── roadmap.py                   # Missing-skills learning roadmap generator
+│       └── role_recommendation.py       # Alternative career path recommendation engine
 │
-├── data/                           # Knowledge & resume data
-│   ├── available_roles.json        # List of supported job roles
-│   ├── resumes/                    # 📂 Put YOUR resume PDF here
-│   │   └── your_resume.pdf
-│   └── roles_data/                 # Job description JSONs (15 roles)
-│       └── *.json
+├── frontend/                            # 🎨 Modern Glassmorphic Web Client
+│   ├── index.html                       # Application interface & layout
+│   ├── styles.css                       # Responsive dark-theme styling & animated orbs
+│   ├── app.js                           # UI event handlers, state management & API client
+│   └── roles.json                       # Supported role list consumed by the UI
 │
-├── requirements.txt                # Python dependencies
-├── .env.example                    # Template for your API keys
-└── .env                            # 🔑 Your secret API keys (create this!)
+├── data/                                # 📚 Knowledge Base Data
+│   ├── available_roles.json             # Master list of all 15 supported role names
+│   └── roles_data/                      # Detailed JSON job descriptions for each role
+│       ├── AI_Engineer_JD.json
+│       ├── Backend Developer_JD.json
+│       ├── Cloud Engineer_JD.json
+│       ├── Data Scientist_JD.json
+│       ├── DevOps Engineer_JD.json
+│       ├── Full Stack Developer_JD.json
+│       └── ... (15 role descriptions total)
+│
+├── .env.example                         # 🔑 Sample configuration file
+├── .env                                 # 🔒 Your secret API keys (git-ignored)
+├── requirements.txt                     # 📦 Pinned Python dependencies
+└── README.md                            # 📖 Project documentation
 ```
 
 ---
 
-## ✅ Prerequisites
+## 🛠️ Prerequisites
 
-Before you start, make sure you have the following installed:
+Before you begin, ensure you have the following installed on your machine:
 
-- **Python 3.10 or above** → [Download Python](https://www.python.org/downloads/)
-- **pip** (comes with Python)
-- **Git** (optional, for cloning) → [Download Git](https://git-scm.com/)
+1. **Python 3.10 or higher**
+   - Check with:
+     ```bash
+     python --version
+     ```
+   - Download from: [python.org](https://www.python.org/downloads/)
+2. **pip (Python Package Manager)**
+   - Check with:
+     ```bash
+     pip --version
+     ```
+3. **Git (Optional, to clone the repo)**
+   - Download from: [git-scm.com](https://git-scm.com/)
 
 ---
 
-## 🚀 Step-by-Step Setup Guide
+## 🔑 Getting Your Free API Keys
 
-### Step 1 — Clone or Download the Project
+ResuMind requires **two free API keys** to run:
 
+### 1. Groq Cloud API Key (LLM Inference)
+1. Visit [console.groq.com](https://console.groq.com/) and register for a free account.
+2. In the left navigation, click **API Keys**.
+3. Click **Create API Key**, give it a name, and copy the key (starts with `gsk_...`).
+
+### 2. Qdrant Cloud API Key & Cluster URL (Vector DB)
+1. Visit [cloud.qdrant.io](https://cloud.qdrant.io/) and create a free account.
+2. Click **Create Cluster** and select the **Free Tier**.
+3. Once cluster creation is complete:
+   - Copy your **Cluster URL** (format: `https://xxxxxx-xxxx-xxxx.aws.cloud.qdrant.io:6333`).
+   - Under **Data Access Control**, generate an **API Key** and copy it.
+
+---
+
+## 🚀 Beginner Step-by-Step Installation & Setup
+
+Follow these exact steps to set up and run the project from scratch:
+
+### Step 1: Clone or Download the Repository
+
+**Using Git:**
 ```bash
-git clone https://github.com/your-username/RAG-Ai-Resume-Analyzer.git
-cd RAG-Ai-Resume-Analyzer-main
+git clone https://github.com/Sudhanshu-Thakur07/RAG-Ai-Resume-Analyzer.git
+cd RAG-Ai-Resume-Analyzer
 ```
 
-> 💡 Or download and extract the ZIP file and open the folder in your terminal.
+*Or download the ZIP from GitHub, extract it, open your terminal / command prompt, and navigate (`cd`) into the folder.*
 
 ---
 
-### Step 2 — Create a Virtual Environment
+### Step 2: Create and Activate a Python Virtual Environment
 
-A virtual environment keeps your project dependencies isolated from your system Python.
+A virtual environment prevents conflicts with other Python projects on your machine.
 
-**On Windows:**
-```bash
+#### On Windows (PowerShell or Command Prompt):
+```powershell
 python -m venv venv
 venv\Scripts\activate
 ```
 
-**On macOS/Linux:**
+#### On macOS / Linux:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-> ✅ You'll know it's active when you see `(venv)` at the start of your terminal prompt.
+> 💡 **Confirmation:** Once activated, you will see `(venv)` prepended to your command prompt.
 
 ---
 
-### Step 3 — Install Dependencies
+### Step 3: Install Required Dependencies
+
+Install all project libraries using `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
 ```
 
 This installs:
-| Package | Purpose |
-|---|---|
-| `groq` | Connects to Groq LLM (AI brain) |
-| `qdrant-client` | Talks to Qdrant vector database |
-| `fastembed` | Converts text into vector embeddings |
-| `pypdf` | Reads and parses your PDF resume |
-| `python-dotenv` | Loads secrets from `.env` file |
-| `fastapi` + `uvicorn` | API framework (available for future use) |
+- `fastapi` & `uvicorn` — High-performance ASGI web framework and server
+- `groq` — Official Groq Cloud LLM SDK
+- `qdrant-client` — Cloud vector database client
+- `fastembed` — High-speed local embedding inference model
+- `pypdf` — PDF document parsing and text extraction
+- `python-dotenv` — Secure environment variable management
 
-> ⏳ The first time `fastembed` runs, it will **automatically download** the embedding model (`BAAI/bge-small-en-v1.5`, ~130MB). This is a one-time download.
+> ⏳ **Note:** On the very first run, `fastembed` will download the lightweight `BAAI/bge-small-en-v1.5` model (~130 MB). This is completely automatic and cached locally.
 
 ---
 
-### Step 4 — Get Your API Keys
+### Step 4: Configure Environment Variables (`.env`)
 
-You need **two** free API keys:
+1. In the **root directory** of the project (same level as `requirements.txt`), duplicate `.env.example` to create your `.env` file:
 
-#### 🔑 A) Groq API Key (Free)
+   **On Windows:**
+   ```powershell
+   copy .env.example .env
+   ```
 
-Groq is the AI engine that powers the analysis.
+   **On macOS / Linux:**
+   ```bash
+   cp .env.example .env
+   ```
 
-1. Go to → [https://console.groq.com](https://console.groq.com)
-2. Sign up for a **free account**
-3. Navigate to **API Keys** → Click **Create API Key**
-4. Copy your key — it starts with `gsk_...`
+2. Open the newly created `.env` file in VS Code or Notepad and replace with your actual keys:
+
+   ```env
+   GROQ_API_KEY=gsk_your_actual_groq_api_key_here
+   QDRANT_URL=https://your-cluster-id.aws.cloud.qdrant.io:6333
+   QDRANT_API_KEY=your_actual_qdrant_api_key_here
+   ```
+
+> ⚠️ **Important formatting rules:**
+> - Do **not** wrap keys in quotes (`"` or `'`).
+> - Keep `.env` in the root folder, not inside `backend/`.
+> - Never commit your `.env` file to public GitHub repositories.
 
 ---
 
-#### 🗄️ B) Qdrant Cloud (Free Tier)
+### Step 5: Start Backend & Frontend (One Command!)
 
-Qdrant is the vector database that stores job description knowledge.
-
-1. Go to → [https://cloud.qdrant.io](https://cloud.qdrant.io)
-2. Sign up for a **free account**
-3. Click **Create Cluster** → Choose the **Free tier**
-4. Once the cluster is ready, you'll find:
-   - **Cluster URL** (looks like: `https://xxxx-xxxx.aws.cloud.qdrant.io`)
-   - **API Key** → Go to **Access** tab → **Create API Key**
-5. Copy both the URL and the API Key
-
----
-
-### Step 5 — Set Up Your `.env` File
-
-In the **root of the project** (same folder as `requirements.txt`), create a `.env` file.
-
-You can copy the provided template:
+Run the application using the CORS & static server wrapper:
 
 ```bash
-# Windows
-copy .env.example .env
-
-# macOS/Linux
-cp .env.example .env
+python -m uvicorn backend.cors_app:app --reload
 ```
 
-Then open `.env` and fill in your actual keys:
+#### What happens when you run this command:
+1. **Vector DB Auto-Check**: The server automatically connects to Qdrant. If the `roles_knowledge` collection is not present, it will automatically embed and load all 15 role descriptions from `data/roles_data/`!
+2. **FastAPI Server Starts**: Launches on `http://127.0.0.1:8000`.
+3. **Frontend Mounts Automatically**: The web UI is statically hosted through the server.
 
-```env
-GROQ_API_KEY=gsk_your_groq_api_key_here
-
-QDRANT_URL=https://your-cluster-url.aws.cloud.qdrant.io
-
-QDRANT_API_KEY=your_qdrant_api_key_here
-```
-
-> ⚠️ **Important:** No quotes needed around the values. Just paste them directly.
-> 🔒 **Never share this file!** It's already in `.gitignore` so it won't be pushed to GitHub.
-
----
-
-### Step 6 — Add Your Resume
-
-Place your **PDF resume** inside the `data/resumes/` folder:
-
-```
-data/
-└── resumes/
-    └── your_resume.pdf    ← Put your PDF here
-```
-
-> 📌 Rules:
-> - Must be a **PDF** file (`.pdf` extension)
-> - Only **one resume** at a time is supported
-> - The file can have any name
-
----
-
-### Step 7 — Run the Analyzer!
-
-From the project root, navigate into the `backend/` folder:
-
-```bash
-cd backend
-```
-
-Then run:
-
-```bash
-python main.py
-```
-
-> 💡 **Automatic Vector DB Setup:** You don't need to manually run a separate database setup script! On the first run, `main.py` checks if the collection exists and automatically calls the `create_db()` function from `setup_vector_db.py` to embed and upload all job descriptions to Qdrant Cloud.
-
-The CLI will check the vector database, display all available roles, and ask you to pick one:
-
-```
-============================================================
-  RAG AI Resume Analyzer
-============================================================
-
+You should see terminal output like this:
+```text
+Connected to Qdrant successfully.
 [Step 1/2] Checking vector database...
   Vector DB ready — 638 knowledge chunks loaded.
-
-[Step 2/2] Role Selection
-
-  Available Roles:
-  ----------------------------------------
-   1. Ai Engineer
-   2. Backend Developer
-   3. Cloud Engineer
-   4. Cloud Security Engineer
-   5. Cybersecurity Engineer
-   6. Data Analyst
-   7. Data Engineer
-   8. Data Scientist
-   9. Devops Engineer
-  10. Frontend Developer
-  11. Full Stack Developer
-  12. Generative Ai / Llm Engineer
-  13. Machine Learning Engineer
-  14. Mlops Engineer / Ml Platform Engineer
-  15. Software Engineer
-  ----------------------------------------
-
-  You can enter:
-    - A number (e.g. 3) to pick from the list above
-    - The role name directly (e.g. data scientist)
-
-  Your choice:
-```
-
-**Two ways to select a role:**
-- Enter the **number** (e.g. `8` for Data Scientist)
-- Type the **role name** directly (e.g. `data scientist`)
-
----
-
-## 📊 Sample Output
-
-```
-Match Percentage:
-72
-
-Missing Skills:
-- Deep Learning frameworks (PyTorch/TensorFlow)
-- Model deployment & MLOps
-- SQL & database querying
-
-Analysis:
-The candidate shows strong Python and data analysis skills with
-relevant project experience. However, key gaps exist in production
-ML deployment and deep learning frameworks.
-
-Other Roles:
-- data analyst
-- machine learning engineer
-- ai engineer
-
-Learning Path:
-- Python fundamentals for ML
-- Statistics and probability
-- Machine Learning with scikit-learn
-- Deep Learning with PyTorch
-
-Study Resources:
-- fast.ai Practical Deep Learning course
-- Kaggle Learn (free, hands-on ML)
-- CS229 Stanford ML Course (free)
-
-Recommended Projects:
-- End-to-end ML pipeline with model deployment
-- NLP text classification project
-- Time series forecasting dashboard
-
-Roadmap:
-- Week 1-2: Brush up Python & NumPy/Pandas
-- Week 3-4: Core ML algorithms with scikit-learn
-- Month 2: Deep Learning fundamentals with PyTorch
-- Month 3: Model deployment with FastAPI + Docker
-
-Interview Questions:
-1. Explain the bias-variance tradeoff...
-2. How would you handle class imbalance?
-...
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process
 ```
 
 ---
 
-## 🌟 Supported Roles
+### Step 6: Open the Application in Your Browser
 
-| Role |
-|------|
-| AI Engineer |
-| Machine Learning Engineer |
-| Generative AI / LLM Engineer |
-| Software Engineer |
-| Backend Developer |
-| Full Stack Developer |
-| Data Scientist |
-| Data Engineer |
-| Data Analyst |
-| Cloud Engineer |
-| DevOps Engineer |
-| Cybersecurity Engineer |
-| Cloud Security Engineer |
-| Frontend Developer |
-| MLOps Engineer / ML Platform Engineer |
+Open your web browser and navigate to:
+
+👉 **[http://127.0.0.1:8000/app/](http://127.0.0.1:8000/app/)**
+
+You will be greeted by the ResuMind dashboard with a live status indicator showing **`API Online`**.
 
 ---
 
-## ❓ Troubleshooting
+## 🖥️ How to Use the ResuMind Web App
 
-### ❌ `.env content is missing` error
-→ Make sure your `.env` file is in the **root project folder** (same level as `requirements.txt`), not inside `backend/`.
-
-### ❌ No PDF resume found error
-→ Make sure your resume is inside the `data/resumes/` folder and it has a `.pdf` extension.
-
-### ❌ `not a valid role or number` error
-→ Type the role name **exactly** as shown (all lowercase), or enter the corresponding **number** from the list instead.
-
-### ❌ Vector database not set up error
-→ The database is set up automatically via `create_db()` when running `python main.py`. If you face issues, ensure your `.env` credentials (`QDRANT_URL`, `QDRANT_API_KEY`) are correct and your Qdrant cluster is active.
-
-### ❌ Qdrant connection error
-→ Double-check your `QDRANT_URL` and `QDRANT_API_KEY` in the `.env` file. Make sure there are no extra spaces or quotes.
-
-### ❌ `fastembed` model downloading slowly
-→ This is normal on first run. The model (~130MB) downloads once and is cached locally automatically.
-
-### ❌ `ModuleNotFoundError`
-→ Make sure your virtual environment is **activated** and you ran `pip install -r requirements.txt` from the root folder.
+1. **Upload Resume**:
+   - Drag & drop your resume PDF or click **Browse Files**.
+   - ResuMind validates the PDF in real-time. If an irrelevant PDF or empty file is uploaded, an alert will prompt you to provide a valid resume.
+2. **Select Target Role or Provide Custom JD**:
+   - **Predefined Role**: Click any role chip (e.g., *AI Engineer*, *Data Scientist*, *Full Stack Developer*).
+   - **Custom JD Tab**: Enter custom title, experience level, required skills, and responsibilities.
+3. **Run AI Analysis**:
+   - Click the gradient **Analyze Resume** button.
+   - Wait ~10-15 seconds while Groq and Qdrant execute semantic retrieval and scoring.
+4. **Review Results**:
+   - Inspect your **Match Score** circular ring.
+   - Review specific **Missing Skills** flagged for the role.
+   - Read the **Analysis Summary** breakdown.
+5. **Explore AI Insights**:
+   - Click **Discover Roles** to find adjacent roles suited to your existing skillset.
+   - Click **Generate Roadmap** to produce a personalized, phase-by-phase learning schedule to bridge your gaps.
 
 ---
 
-## 🔄 Re-running the Project Later
+## 🎯 15 Pre-Configured Roles
 
-After the first-time setup, here's all you need to do:
-
-```bash
-# 1. Activate virtual environment
-venv\Scripts\activate          # Windows
-# or
-source venv/bin/activate        # macOS/Linux
-
-# 2. Go to backend folder
-cd backend
-
-# 3. Run the analyzer
-python main.py
-```
-
-> Vector database initialization is automatically handled by `main.py` via `create_db()`.
-
----
-
-## 🏗️ Tech Stack
-
-| Technology | Role |
-|---|---|
-| 🐍 Python | Core language |
-| 🤖 Groq (Qwen 3.8-27B) | LLM for analysis & generation |
-| 🗃️ Qdrant Cloud | Vector database for RAG |
-| ⚡ FastEmbed (BAAI/bge-small-en-v1.5) | Text embeddings |
-| 📄 PyPDF | PDF resume parsing |
-| 🔐 python-dotenv | Environment variable management |
-| ✅ Pydantic | Structured JSON output schemas |
+| # | Role | Knowledge Data File |
+|:---:|---|---|
+| 1 | AI Engineer | `data/roles_data/AI_Engineer_JD.json` |
+| 2 | Machine Learning Engineer | `data/roles_data/Machine Learning Engineer_JD.json` |
+| 3 | Generative AI / LLM Engineer | `data/roles_data/GEN_AI Engineer_JD.json` |
+| 4 | Software Engineer | `data/roles_data/Software Engineer_JD.json` |
+| 5 | Backend Developer | `data/roles_data/Backend Developer_JD.json` |
+| 6 | Full Stack Developer | `data/roles_data/Full Stack Developer_JD.json` |
+| 7 | Data Scientist | `data/roles_data/Data Scientist_JD.json` |
+| 8 | Data Engineer | `data/roles_data/Data Engineer_JD.json` |
+| 9 | Data Analyst | `data/roles_data/Data Analyst_JD.json` |
+| 10 | Cloud Engineer | `data/roles_data/Cloud Engineer_JD.json` |
+| 11 | DevOps Engineer | `data/roles_data/DevOps Engineer_JD.json` |
+| 12 | Cybersecurity Engineer | `data/roles_data/Cybersecurity Engineer_JD.json` |
+| 13 | Cloud Security Engineer | `data/roles_data/Cloud Security Engineer_JD.json` |
+| 14 | Frontend Developer | `data/roles_data/Frontend Developer_JD.json` |
+| 15 | MLOps Engineer / Platform Engineer | `data/roles_data/MLOps Engineer_JD.json` |
 
 ---
 
-## 📝 License
+## 📡 REST API Reference
 
-This project is open-source and free to use for learning and personal projects.
+You can also interact directly with the FastAPI backend using cURL, Postman, or Python scripts:
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/` | Health check (`{"Description": "ResuMind..."}`) |
+| `POST` | `/upload-pdf` | Upload resume PDF file (`multipart/form-data`) |
+| `POST` | `/role-select?role=<role_name>` | Select predefined role target |
+| `POST` | `/upload-jd` | Submit custom job description JSON body |
+| `GET` | `/analyze` | Execute RAG analysis between resume & target |
+| `GET` | `/reccomanded-roles` | Get alternate role recommendations |
+| `GET` | `/roadmap` | Generate skill-gap learning roadmap |
+| `GET` | `/docs` | Interactive Swagger API documentation |
 
 ---
 
-> Built with ❤️ — Happy job hunting! 🚀
+## ❓ Troubleshooting & FAQs
+
+### 1. `python -m uvicorn` gives `'uvicorn' is not recognized` or `ModuleNotFoundError`
+- **Fix:** Ensure your virtual environment is activated (`venv\Scripts\activate` on Windows or `source venv/bin/activate` on Mac/Linux) and run `pip install -r requirements.txt`.
+
+### 2. Error: `ValueError: .env content is missing`
+- **Fix:** Confirm your `.env` file is named exactly `.env` (not `.env.txt`) and placed in the project root directory alongside `requirements.txt`. Ensure all three keys (`GROQ_API_KEY`, `QDRANT_URL`, `QDRANT_API_KEY`) are populated without quotes.
+
+### 3. Qdrant Connection Error / Timeout
+- **Fix:** Free tier clusters on Qdrant Cloud may pause after inactivity. Log into [cloud.qdrant.io](https://cloud.qdrant.io/) and click **Resume**. Also ensure your cluster URL includes the `:6333` port or HTTPS protocol as displayed in your Qdrant console.
+
+### 4. Upload Error: `The uploaded PDF does not appear to be a resume`
+- **Fix:** ResuMind includes safety heuristics requiring at least 3 standard resume sections (e.g., education, experience, skills, projects). Make sure you are uploading a valid resume and not an arbitrary PDF document.
+
+### 5. Frontend shows `API Offline`
+- **Fix:** Ensure the terminal running `python -m uvicorn backend.cors_app:app --reload` is running and has no unhandled crash errors. Access the frontend via `http://127.0.0.1:8000/app/`.
+
+---
+
+## 👨‍💻 Author & Connect
+
+**Sudhanshu Thakur**  
+AI & Full Stack Developer
+
+- 💼 **LinkedIn**: [linkedin.com/in/sudhanshu-thakur07](https://www.linkedin.com/in/sudhanshu-thakur07/)
+- 🐙 **GitHub**: [github.com/Sudhanshu-Thakur07](https://github.com/Sudhanshu-Thakur07)
+- 📧 **Repository**: [RAG-Ai-Resume-Analyzer](https://github.com/Sudhanshu-Thakur07/RAG-Ai-Resume-Analyzer)
+
+If you found this project helpful, please consider giving it a ⭐ on GitHub!
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE) — free for educational, personal, and open-source usage.

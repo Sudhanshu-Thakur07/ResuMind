@@ -1,4 +1,4 @@
-from config import (
+from backend.config import (
     qdrant_client,
     embeddings_model,
     COLLECTION_NAME
@@ -29,3 +29,4 @@ def extract_context(points):
             context.append(point.payload["text"])
 
     return "\n\n".join(context)
+

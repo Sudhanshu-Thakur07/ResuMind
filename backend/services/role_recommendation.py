@@ -1,9 +1,9 @@
 import json
 
-from schemas import other_roles_response_format
+from backend.schemas import other_roles_response_format
 
-from services.llm_service import generate_llm_response
-from services.qdrant_service import search, extract_context
+from backend.services.llm_service import generate_llm_response
+from backend.services.qdrant_service import search, extract_context
 
 
 def generate_other_roles(resume_extract, current_role):

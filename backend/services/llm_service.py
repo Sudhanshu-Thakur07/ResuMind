@@ -1,4 +1,4 @@
-from config import groq_client, llm_model
+from backend.config import groq_client, llm_model
 
 
 def content_extraction(content, response_format, content_type):
@@ -17,8 +17,8 @@ def content_extraction(content, response_format, content_type):
                     CONTENT:
                     {content}
 
-                    Return the result strictly according to the provided schema.
-"""
+                    Return the result strictly according to the provided schema.  """
+
 
     response = groq_client.chat.completions.create(
         messages=[
@@ -33,6 +33,7 @@ def content_extraction(content, response_format, content_type):
     )
 
     return response.choices[0].message.content
+
 
 
 

@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-# from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance,VectorParams,PointStruct
 import json
@@ -38,7 +37,7 @@ qdrant_client = QdrantClient(
 MAX_RETRIES = 3
 for attempt in range(1, MAX_RETRIES + 1):
     try:
-        qdrant_client.get_collections()  # lightweight ping
+        qdrant_client.get_collections()  
         print("Connected to Qdrant successfully.")
         break
     except Exception as conn_err:
@@ -49,7 +48,6 @@ for attempt in range(1, MAX_RETRIES + 1):
             print("  1. Your Qdrant Cloud cluster may be PAUSED. Visit https://cloud.qdrant.io and resume it.")
             print("  2. Verify QDRANT_URL and QDRANT_API_KEY in your .env file are correct and not expired.")
             print("  3. Check your internet connection / firewall settings.")
-            raise SystemExit(1)
         print(f"  Attempt {attempt} failed: {conn_err}. Retrying in 5 seconds...")
         time.sleep(5)
 
@@ -213,28 +211,6 @@ def create_db():
                     )
                     index += 1
 
-                # Interview questions
-                for number, question in role_data.get("interview_questions", {}).items():
-
-                    text = f"""
-                                Role: {role_name}
-                                Interview Question: {question}
-                                """
-
-                    points.append(
-                        PointStruct(
-                            id=index,
-                            vector=list(embeddings_model.embed([text]))[0].tolist(),
-                            payload={
-                                "role": role_name,
-                                "category": "interview_question",
-                                "question_number": number,
-                                "source": roles_details.name,
-                                "text": text.strip()
-                            }
-                        )
-                    )
-                    index += 1
 
                 # Projects
                 for number, project in role_data.get("projects", {}).items():

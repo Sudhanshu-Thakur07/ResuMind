@@ -38,6 +38,7 @@ class RoadmapResponse(BaseModel):
     roadmap: list[str]
 
 
+
 def json_response_format(name, schema):
     return {
         "type": "json_schema",
@@ -71,3 +72,4 @@ other_roles_response_format = json_response_format(
 roadmap_response_format = {
     "type": "json_object"
 }
+
