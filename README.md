@@ -22,16 +22,16 @@
 
 ## 📌 Overview
 
-**ResuMind** is a production-ready **Retrieval-Augmented Generation (RAG)** resume intelligence platform designed to evaluate job candidate fit with semantic depth rather than simple keyword tallying. 
+**ResuMind** is an AI-powered resume intelligence platform designed to evaluate job candidate fit with deep semantic reasoning rather than simple keyword tallying. 
 
-Upload any resume in PDF format, select from **15 pre-configured tech roles** (or supply a custom Job Description), and receive:
-- 🎯 **Semantic Match Score** (interactive circular ring)
-- ⚠️ **Missing Skills Gap Analysis**
-- 📝 **Detailed Strengths & Fit Evaluation**
-- 🧭 **Alternative Role Recommendations**
-- 🗺️ **Personalized Step-by-Step Learning Roadmap** to fill missing technical gaps
+Upload any resume in PDF format, select from **15 curated technology roles** (or supply a custom Job Description), and receive:
+- 🎯 **Overall Match Score** with visual radial progress indicator and tier ratings
+- 📝 **Recruiter Feedback & Summary** with one-click copy
+- ⚠️ **Skills to Improve or Learn** highlighting exact competency gaps
+- 🧭 **Recommended Roles** suggesting adjacent career paths tailored to your background
+- 🗺️ **Personalized Learning Roadmap** with step-by-step phases, study resources, practical projects, and milestones with Markdown export
 
-Powered by **Groq Cloud's ultra-fast LLM inference (`qwen/qwen3.8-27b`)**, **Qdrant Vector Database**, and **FastEmbed (`BAAI/bge-small-en-v1.5`)**, delivered through an animated **glassmorphic dark UI**.
+Powered by **Groq Cloud's ultra-fast LLM inference (`qwen/qwen3.8-27b`)**, **Qdrant Vector Database**, and **FastEmbed (`BAAI/bge-small-en-v1.5`)**, delivered through an animated **glassmorphic dark UI built with React 19 and Vite**.
 
 ---
 
@@ -70,26 +70,18 @@ Powered by **Groq Cloud's ultra-fast LLM inference (`qwen/qwen3.8-27b`)**, **Qdr
                  ├────────────────────────┬────────────────────────┐
                  ▼                        ▼                        ▼
         ┌──────────────────┐    ┌──────────────────┐    ┌─────────────────────┐
-        │  Match Score &   │    │  Alternate Role  │    │ Personalized Gap    │
-        │  Missing Skills  │    │  Recommendations │    │ Learning Roadmap    │
+        │  Match Score &   │    │  Recommended     │    │ Personalized        │
+        │  Feedback Memo   │    │  Career Roles    │    │ Learning Roadmap    │
         └────────┬─────────┘    └────────┬─────────┘    └──────────┬──────────┘
                  │                       │                         │
                  └───────────────────────┼─────────────────────────┘
                                          ▼
                         ┌─────────────────────────────────┐
-                        │   ResuMind Dark Glassmorphic    │
-                        │    Web Application Interface    │
+                        │   ResuMind Glassmorphic UI      │
+                        │   (React 19 + Vite Frontend)    │
                         │   (http://127.0.0.1:8000/app/)  │
                         └─────────────────────────────────┘
 ```
-
-## Project Demo Video 
-
-
-https://github.com/user-attachments/assets/e0686f91-b72d-43cf-9e08-94c670bc9b81
-
-
-
 
 ---
 
@@ -98,13 +90,14 @@ https://github.com/user-attachments/assets/e0686f91-b72d-43cf-9e08-94c670bc9b81
 | Feature | Description |
 |---|---|
 | **📄 Smart Resume Validation** | PyPDF parser checks content depth and structural resume keywords (education, skills, experience) to block invalid files. |
-| **🔍 Semantic RAG Retrieval** | FastEmbed generates dense embeddings; Qdrant retrieves top-15 relevant role chunks based on semantic meaning. |
+| **🔍 Semantic Vector Retrieval** | FastEmbed generates dense embeddings; Qdrant retrieves top-15 relevant role chunks based on semantic meaning. |
 | **🤖 Groq LLM Reasoning** | Uses high-throughput Qwen 3.8-27B to evaluate skills conceptually rather than naive exact-keyword matching. |
-| **🎯 Dual Target Mode** | Choose from **15 curated technology roles** or supply a custom job description with custom experience and required skills. |
-| **📊 Visual Score Dashboard** | Animated circular SVG match-score indicator and categorized missing skills chips. |
-| **🧭 Career Role Pivot** | Analyzes candidate strengths to recommend adjacent tech roles that fit their profile. |
-| **🗺️ Gap-Closing Roadmap** | Generates an actionable, ordered learning roadmap tailored precisely to your missing skills. |
-| **🌐 Unified Single Server** | FastAPI serves both backend REST endpoints and frontend static assets on a single port without CORS hassle. |
+| **🎯 Dual Target Mode** | Choose from **15 curated technology roles** with plain-English descriptions or supply a custom job description. |
+| **📊 Overall Match Score** | Animated circular SVG match score with intuitive rating tiers (*Strong Match*, *Good Match*, *Moderate Match*, *Needs Improvement*). |
+| **📝 Recruiter Feedback & Gaps** | Detailed feedback summary and clear tags of skills to improve or learn. |
+| **🧭 Recommended Roles** | Identifies alternative career positions matching your unique background. |
+| **🗺️ Gap-Closing Roadmap** | Phased learning path, curated study resources, practical projects, and milestones with Markdown export. |
+| **🌐 Unified Single Server** | FastAPI serves both backend REST endpoints and frontend production assets on a single port without CORS hassle. |
 
 ---
 
@@ -126,11 +119,21 @@ RAG-Ai-Resume-Analyzer-main/
 │       ├── roadmap.py                   # Missing-skills learning roadmap generator
 │       └── role_recommendation.py       # Alternative career path recommendation engine
 │
-├── frontend/                            # 🎨 Modern Glassmorphic Web Client
-│   ├── index.html                       # Application interface & layout
-│   ├── styles.css                       # Responsive dark-theme styling & animated orbs
-│   ├── app.js                           # UI event handlers, state management & API client
-│   └── roles.json                       # Supported role list consumed by the UI
+├── frontend/                            # 🎨 Compiled Production Web Client (dist)
+│   ├── index.html                       # Production entry HTML
+│   └── assets/                          # Minified CSS & JS bundles
+│
+├── frontend-src/                        # ⚡ React 19 + Vite Frontend Source Code
+│   ├── src/
+│   │   ├── components/                  # Navbar, ResumeDropzone, TargetSelector,
+│   │   │                                # ResultsDeck, AnalysisPipelineModal, ToastContainer
+│   │   ├── data/rolesData.js            # 15 Curated tech role benchmarks & categories
+│   │   ├── App.jsx                      # Main React workspace & workflow coordinator
+│   │   ├── index.css                    # Obsidian Nebula Glassmorphic design system
+│   │   └── main.jsx                     # React root mount
+│   ├── index.html                       # Development HTML template
+│   ├── package.json                     # Frontend dependencies & build scripts
+│   └── vite.config.js                   # Vite configuration (proxies & build outDir)
 │
 ├── data/                                # 📚 Knowledge Base Data
 │   ├── available_roles.json             # Master list of all 15 supported role names
@@ -304,7 +307,25 @@ Open your web browser and navigate to:
 
 👉 **[http://127.0.0.1:8000/app/](http://127.0.0.1:8000/app/)**
 
-You will be greeted by the ResuMind dashboard with a live status indicator showing **`API Online`**.
+You will be greeted by the ResuMind dashboard with a live status indicator showing **`System Online`**.
+
+---
+
+### 💻 Optional: Frontend Development with Hot Reloading (Vite)
+
+If you want to modify or develop the React frontend with instant hot-module replacement (HMR):
+
+```bash
+cd frontend-src
+npm install
+npm run dev
+```
+- Open `http://localhost:5173` in your browser (Vite automatically proxies API requests to `http://localhost:8000`).
+- To compile updated production assets for FastAPI static hosting:
+  ```bash
+  npm run build
+  ```
+  *(The compiled bundle is automatically placed into `../frontend/`)*
 
 ---
 
@@ -312,20 +333,17 @@ You will be greeted by the ResuMind dashboard with a live status indicator showi
 
 1. **Upload Resume**:
    - Drag & drop your resume PDF or click **Browse Files**.
-   - ResuMind validates the PDF in real-time. If an irrelevant PDF or empty file is uploaded, an alert will prompt you to provide a valid resume.
+   - ResuMind validates the PDF in real-time to confirm readable resume structure (experience, skills, education).
 2. **Select Target Role or Provide Custom JD**:
-   - **Predefined Role**: Click any role chip (e.g., *AI Engineer*, *Data Scientist*, *Full Stack Developer*).
-   - **Custom JD Tab**: Enter custom title, experience level, required skills, and responsibilities.
+   - **Popular Job Roles**: Choose from 15 curated tech positions with clear, plain-English summaries.
+   - **Custom Job Description**: Enter target title, experience level, required skills, and key responsibilities.
 3. **Run AI Analysis**:
-   - Click the gradient **Analyze Resume** button.
-   - Wait ~10-15 seconds while Groq and Qdrant execute semantic retrieval and scoring.
-4. **Review Results**:
-   - Inspect your **Match Score** circular ring.
-   - Review specific **Missing Skills** flagged for the role.
-   - Read the **Analysis Summary** breakdown.
-5. **Explore AI Insights**:
-   - Click **Discover Roles** to find adjacent roles suited to your existing skillset.
-   - Click **Generate Roadmap** to produce a personalized, phase-by-phase learning schedule to bridge your gaps.
+   - Click the gradient **Analyze Resume Fit** button.
+   - ResuMind compares your background with the target requirements using Groq LLM reasoning and Qdrant vector retrieval.
+4. **Explore the Results Sections**:
+   - **Match & Feedback**: Check your **Overall Match Score** (animated circular meter with tier rating), read the **Recruiter Feedback & Summary** (with one-click copy), and review **Skills to Improve or Learn**.
+   - **Recommended Roles**: Browse adjacent career paths and tech roles that fit your existing skills.
+   - **Learning Roadmap**: Review your phased learning path, curated study resources, practical projects, and milestones with an **Export Roadmap (Markdown)** button.
 
 ---
 

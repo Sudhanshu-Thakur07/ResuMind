@@ -64,6 +64,7 @@ desktop.ini
 # ==========================
 # Build & Distribution
 # ==========================
+node_modules/
 build/
 dist/
 *.egg-info/
