@@ -31,7 +31,6 @@ export function App() {
   const [customJdData, setCustomJdData] = useState(null);
 
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [hasAnalyzed, setHasAnalyzed] = useState(false);
   const [analysisData, setAnalysisData] = useState(null);
   const [toasts, setToasts] = useState([]);
 
@@ -40,9 +39,7 @@ export function App() {
   const handleTargetModeChange = (newMode) => {
     if (newMode !== targetMode) {
       setTargetMode(newMode);
-      if (!hasAnalyzed) {
-        setAnalysisData(null); // Clear previous analysed info when switching mode
-      }
+      setAnalysisData(null); // Clear previous analysed info when switching mode
     }
   };
 
@@ -103,7 +100,6 @@ export function App() {
 
       setUploadedFile(file);
       setAnalysisData(null);
-      setHasAnalyzed(false);
       addToast(`Resume "${file.name}" uploaded successfully!`, 'success');
     } catch (err) {
       addToast(err.message || 'Failed to upload PDF', 'error');
@@ -116,16 +112,13 @@ export function App() {
   const handleFileRemove = () => {
     setUploadedFile(null);
     setAnalysisData(null);
-    setHasAnalyzed(false);
     addToast('Resume removed. Please upload a new PDF.', 'info');
   };
 
   // Select Predefined Role
   const handleRoleSelect = async (roleId) => {
     setSelectedRole(roleId);
-    if (!hasAnalyzed) {
-      setAnalysisData(null);
-    }
+    setAnalysisData(null);
     try {
       const resp = await fetch(`${API_BASE}/role-select?role=${encodeURIComponent(roleId)}`, {
         method: 'POST',
@@ -153,9 +146,7 @@ export function App() {
 
       setCustomJdData(payload);
       setSelectedRole(null);
-      if (!hasAnalyzed) {
-        setAnalysisData(null);
-      }
+      setAnalysisData(null);
       addToast(`Job description for "${payload.role}" saved successfully!`, 'success');
     } catch (err) {
       addToast(err.message, 'error');
@@ -166,11 +157,6 @@ export function App() {
   const handleRunAnalysis = async () => {
     if (!uploadedFile) {
       addToast('Please upload a resume PDF first', 'error');
-      return;
-    }
-
-    if (hasAnalyzed) {
-      addToast('Analysis already completed for this upload. Upload a new resume to analyze again.', 'info');
       return;
     }
 
@@ -196,7 +182,6 @@ export function App() {
 
       const data = await resp.json();
       setAnalysisData(data);
-      setHasAnalyzed(true);
       addToast('Resume analysis completed!', 'success');
 
       setTimeout(() => {
@@ -299,7 +284,7 @@ export function App() {
         <section className="execute-bar-section">
           <button 
             className="execute-cta-btn"
-            disabled={!isReadyToAnalyze || isAnalyzing || hasAnalyzed}
+            disabled={!isReadyToAnalyze || isAnalyzing}
             onClick={handleRunAnalysis}
             type="button"
           >
@@ -307,11 +292,6 @@ export function App() {
               <>
                 <RefreshCw size={18} className="upload-spinner-ring" style={{ width: '18px', height: '18px', borderWidth: '2px' }} />
                 <span>Analyzing Resume & Job Fit...</span>
-              </>
-            ) : hasAnalyzed ? (
-              <>
-                <ShieldCheck size={18} />
-                <span>Analysis Completed</span>
               </>
             ) : (
               <>
@@ -321,13 +301,8 @@ export function App() {
             )}
           </button>
 
-          <div className={`execute-hint ${isReadyToAnalyze && !hasAnalyzed ? 'ready' : ''}`}>
-            {hasAnalyzed ? (
-              <>
-                <ShieldCheck size={14} />
-                <span>Analysis completed. Upload a new resume to run another analysis.</span>
-              </>
-            ) : isReadyToAnalyze ? (
+          <div className={`execute-hint ${isReadyToAnalyze ? 'ready' : ''}`}>
+            {isReadyToAnalyze ? (
               <>
                 <ShieldCheck size={14} />
                 <span>Resume and target role ready. Click analyze to see your results!</span>

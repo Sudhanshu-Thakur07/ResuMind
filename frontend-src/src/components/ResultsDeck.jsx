@@ -255,46 +255,44 @@ export const ResultsDeck = ({
         </div>
       </div>
 
-      {/* Navigation Tabs (Only for predefined roles; hidden for custom JD) */}
-      {targetMode !== 'jd' && (
-        <div className="deep-views-tab-bar">
-          <button 
-            className={`deep-view-btn ${activeTab === 'summary' ? 'active' : ''}`}
-            onClick={() => setActiveTab('summary')}
-            type="button"
-          >
-            <Award size={16} />
-            <span>Match & Feedback</span>
-          </button>
+      {/* Navigation Tabs */}
+      <div className="deep-views-tab-bar">
+        <button
+          className={`deep-view-btn ${activeTab === 'summary' ? 'active' : ''}`}
+          onClick={() => setActiveTab('summary')}
+          type="button"
+        >
+          <Award size={16} />
+          <span>Match & Feedback</span>
+        </button>
 
-          <button 
-            className={`deep-view-btn ${activeTab === 'roles' ? 'active' : ''}`}
-            onClick={() => {
-              setActiveTab('roles');
-              handleFetchRoles();
-            }}
-            type="button"
-          >
-            <Compass size={16} />
-            <span>Recommended Roles</span>
-          </button>
+        <button
+          className={`deep-view-btn ${activeTab === 'roles' ? 'active' : ''}`}
+          onClick={() => {
+            setActiveTab('roles');
+            handleFetchRoles();
+          }}
+          type="button"
+        >
+          <Compass size={16} />
+          <span>Recommended Roles</span>
+        </button>
 
-          <button 
-            className={`deep-view-btn ${activeTab === 'roadmap' ? 'active' : ''}`}
-            onClick={() => {
-              setActiveTab('roadmap');
-              handleFetchRoadmap();
-            }}
-            type="button"
-          >
-            <Map size={16} />
-            <span>Learning Roadmap</span>
-          </button>
-        </div>
-      )}
+        <button
+          className={`deep-view-btn ${activeTab === 'roadmap' ? 'active' : ''}`}
+          onClick={() => {
+            setActiveTab('roadmap');
+            handleFetchRoadmap();
+          }}
+          type="button"
+        >
+          <Map size={16} />
+          <span>Learning Roadmap</span>
+        </button>
+      </div>
 
       {/* SECTION 1: MATCH & FEEDBACK (from /analyze -> match_answer) */}
-      {(targetMode === 'jd' || activeTab === 'summary') && (
+      {activeTab === 'summary' && (
         <div className="analysis-layout-grid">
           {/* Recruiter Feedback Memo */}
           <div className="recruiter-synthesis-card">
@@ -347,7 +345,7 @@ export const ResultsDeck = ({
       )}
 
       {/* SECTION 2: RECOMMENDED ROLES (from /reccomanded-roles endpoint) */}
-      {targetMode !== 'jd' && activeTab === 'roles' && (
+      {activeTab === 'roles' && (
         <div>
           {loadingRoles ? (
             <div className="upload-loading-state" style={{ padding: '40px 0' }}>
@@ -390,7 +388,7 @@ export const ResultsDeck = ({
       )}
 
       {/* SECTION 3: LEARNING ROADMAP (from /roadmap endpoint) */}
-      {targetMode !== 'jd' && activeTab === 'roadmap' && (
+      {activeTab === 'roadmap' && (
         <div>
           {loadingRoadmap ? (
             <div className="upload-loading-state" style={{ padding: '40px 0' }}>

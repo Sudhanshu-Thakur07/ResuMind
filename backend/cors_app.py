@@ -32,7 +32,6 @@ def get_allowed_origins() -> list[str]:
         "http://127.0.0.1:8000",
     ]
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=get_allowed_origins(),
@@ -45,12 +44,12 @@ app.add_middleware(
 # while preserving the API endpoints defined in backend.main.
 frontend_dir = (Path(__file__).resolve().parent.parent / "frontend").resolve()
 if frontend_dir.exists():
-    app.mount("/app", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
-
     @app.get("/app/{full_path:path}", include_in_schema=False)
     async def serve_frontend(full_path: str):
         candidate = (frontend_dir / full_path).resolve()
-        if candidate.is_file() and frontend_dir in candidate.parents or candidate == frontend_dir:
+        if candidate.is_file() and frontend_dir in candidate.parents:
             return FileResponse(candidate)
 
         return FileResponse(frontend_dir / "index.html")
+
+    app.mount("/app", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
