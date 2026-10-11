@@ -1,0 +1,210 @@
+{
+  "Software Engineer⭐": {
+    "role": {
+      "title": "Software Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Software design, algorithms, backend services, testing, APIs and production engineering",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement software design, algorithms, backend services, testing, apis and production engineering.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "programming": [
+        "Python or JavaScript/TypeScript",
+        "OOP",
+        "data structures",
+        "algorithms"
+      ],
+      "backend": [
+        "REST APIs",
+        "HTTP",
+        "authentication",
+        "FastAPI or equivalent"
+      ],
+      "databases": [
+        "SQL",
+        "schema design",
+        "transactions",
+        "indexes"
+      ],
+      "engineering": [
+        "Git",
+        "testing",
+        "debugging",
+        "logging",
+        "clean architecture"
+      ],
+      "systems": [
+        "Linux",
+        "networking basics",
+        "caching",
+        "queues",
+        "concurrency"
+      ],
+      "deployment": [
+        "Docker",
+        "CI/CD",
+        "cloud fundamentals"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What are the SOLID principles?",
+      "2": "What is abstraction?",
+      "3": "Composition versus inheritance?",
+      "4": "What is polymorphism?",
+      "5": "What is time complexity?",
+      "6": "Explain Big-O.",
+      "7": "Array versus linked list?",
+      "8": "Stack versus queue?",
+      "9": "How does a hash table work?",
+      "10": "What is a binary search tree?",
+      "11": "When would you use a heap?",
+      "12": "What is recursion?",
+      "13": "How do you prevent recursion issues?",
+      "14": "What is an API?",
+      "15": "REST versus RPC?",
+      "16": "What are HTTP methods?",
+      "17": "What are HTTP status codes?",
+      "18": "What is idempotency?",
+      "19": "Authentication versus authorization?",
+      "20": "What is JWT?",
+      "21": "What is SQL indexing?",
+      "22": "What is normalization?",
+      "23": "What are transactions?",
+      "24": "What is ACID?",
+      "25": "SQL versus NoSQL?",
+      "26": "What is caching?",
+      "27": "What is cache invalidation?",
+      "28": "What is concurrency?",
+      "29": "Process versus thread?",
+      "30": "What is async I/O?",
+      "31": "How do you handle race conditions?",
+      "32": "What is a message queue?",
+      "33": "Why use Docker?",
+      "34": "What is CI/CD?",
+      "35": "How do unit tests differ from integration tests?",
+      "36": "What is mocking?",
+      "37": "How do you debug a production issue?",
+      "38": "What should logs contain?",
+      "39": "How do you manage secrets?",
+      "40": "How do you review code?",
+      "41": "How do you resolve a Git merge conflict?",
+      "42": "What is a pull request?",
+      "43": "How would you design a URL shortener?",
+      "44": "How would you design a notification service?",
+      "45": "How would you scale an API?",
+      "46": "How would you make an API resilient?",
+      "47": "How do rate limits work?",
+      "48": "How would you design a file-upload service?",
+      "49": "How do you improve database performance?",
+      "50": "Design a production web service."
+    },
+    "projects": {
+      "1": {
+        "name": "Scalable Task Management API",
+        "description": "Build a multi-user API with authentication, authorization, PostgreSQL, validation, pagination, background jobs, tests and Docker deployment.",
+        "strong_features": [
+          "FastAPI",
+          "PostgreSQL",
+          "JWT",
+          "Redis",
+          "pytest"
+        ],
+        "stack": [
+          "FastAPI",
+          "PostgreSQL",
+          "JWT",
+          "Redis",
+          "pytest"
+        ]
+      },
+      "2": {
+        "name": "Event-Driven Order Platform",
+        "description": "Build order, payment and notification services communicating through asynchronous events with retries and idempotency.",
+        "strong_features": [
+          "microservices",
+          "message queues",
+          "idempotency",
+          "observability",
+          "Docker"
+        ],
+        "stack": [
+          "microservices",
+          "message queues",
+          "idempotency",
+          "observability",
+          "Docker"
+        ]
+      },
+      "3": {
+        "name": "Real-Time Collaboration Backend",
+        "description": "Build a collaborative service with WebSockets, presence, conflict handling, persistence and horizontal-scaling considerations.",
+        "strong_features": [
+          "WebSockets",
+          "Redis",
+          "PostgreSQL",
+          "concurrency",
+          "testing"
+        ],
+        "stack": [
+          "WebSockets",
+          "Redis",
+          "PostgreSQL",
+          "concurrency",
+          "testing"
+        ]
+      }
+    },
+    "study_resources": {
+      "CS Fundamentals": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=8hly31xKli0"
+      },
+      "Python": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=eWRfhZUzrAc"
+      },
+      "SQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+      },
+      "Git": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+      },
+      "Docker": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.docker.com/get-started/"
+      },
+      "System Design": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://github.com/donnemartin/system-design-primer"
+      }
+    }
+  }}

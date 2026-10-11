@@ -1,0 +1,210 @@
+{
+  "DevOps Engineer⭐": {
+    "role": {
+      "title": "DevOps Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "CI/CD, infrastructure automation, containers, Kubernetes, observability and reliable delivery",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement ci/cd, infrastructure automation, containers, kubernetes, observability and reliable delivery.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "linux": [
+        "shell",
+        "processes",
+        "permissions",
+        "networking"
+      ],
+      "automation": [
+        "GitHub Actions",
+        "CI/CD",
+        "Terraform"
+      ],
+      "containers": [
+        "Docker",
+        "Kubernetes"
+      ],
+      "cloud": [
+        "AWS/GCP/Azure basics",
+        "IAM",
+        "networking"
+      ],
+      "observability": [
+        "Prometheus",
+        "Grafana",
+        "logs",
+        "traces",
+        "alerts"
+      ],
+      "reliability": [
+        "SLOs",
+        "incident response",
+        "backups",
+        "rollback"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is DevOps?",
+      "2": "What is CI?",
+      "3": "What is CD?",
+      "4": "What is a deployment pipeline?",
+      "5": "What is a Git branching strategy?",
+      "6": "What is a build artifact?",
+      "7": "What is Docker?",
+      "8": "Image versus container?",
+      "9": "What is a Dockerfile?",
+      "10": "How do Docker layers work?",
+      "11": "What is Kubernetes?",
+      "12": "What is a Pod?",
+      "13": "Deployment versus StatefulSet?",
+      "14": "What is a Service?",
+      "15": "What is Ingress?",
+      "16": "What is a ConfigMap?",
+      "17": "How are secrets handled?",
+      "18": "What is Terraform?",
+      "19": "Why use infrastructure as code?",
+      "20": "What is Terraform state?",
+      "21": "What is idempotency?",
+      "22": "What is blue-green deployment?",
+      "23": "What is canary deployment?",
+      "24": "What is rolling deployment?",
+      "25": "What is rollback?",
+      "26": "What is a health check?",
+      "27": "Liveness versus readiness?",
+      "28": "What is autoscaling?",
+      "29": "What is observability?",
+      "30": "Metrics versus logs versus traces?",
+      "31": "What is Prometheus?",
+      "32": "What is Grafana?",
+      "33": "What is an alert?",
+      "34": "What is an SLO?",
+      "35": "What is an SLA?",
+      "36": "What is incident response?",
+      "37": "How do you debug a failed deployment?",
+      "38": "How do you handle flaky tests?",
+      "39": "How do you secure CI/CD credentials?",
+      "40": "How do you scan container images?",
+      "41": "How do you reduce deployment risk?",
+      "42": "How do you manage configuration across environments?",
+      "43": "How do you optimize build time?",
+      "44": "How do you design a zero-downtime deployment?",
+      "45": "How would you deploy Kubernetes applications?",
+      "46": "How would you design a CI/CD pipeline?",
+      "47": "How would you recover from production failure?",
+      "48": "How do you monitor application health?",
+      "49": "How do you implement automated rollback?",
+      "50": "Design a production DevOps platform."
+    },
+    "projects": {
+      "1": {
+        "name": "Production CI/CD Platform",
+        "description": "Create a pipeline that tests, scans, builds Docker images, deploys to staging, runs smoke tests and promotes production with rollback support.",
+        "strong_features": [
+          "GitHub Actions",
+          "Docker",
+          "Kubernetes",
+          "security scanning",
+          "rollback"
+        ],
+        "stack": [
+          "GitHub Actions",
+          "Docker",
+          "Kubernetes",
+          "security scanning",
+          "rollback"
+        ]
+      },
+      "2": {
+        "name": "Kubernetes Application Platform",
+        "description": "Deploy multiple services with ingress, autoscaling, health checks, secrets, centralized logs and metrics.",
+        "strong_features": [
+          "Kubernetes",
+          "Helm",
+          "Prometheus",
+          "Grafana",
+          "Docker"
+        ],
+        "stack": [
+          "Kubernetes",
+          "Helm",
+          "Prometheus",
+          "Grafana",
+          "Docker"
+        ]
+      },
+      "3": {
+        "name": "Infrastructure Automation Stack",
+        "description": "Provision repeatable cloud infrastructure with Terraform and configure monitoring, networking, IAM and application deployment.",
+        "strong_features": [
+          "Terraform",
+          "cloud IAM",
+          "networking",
+          "CI/CD",
+          "monitoring"
+        ],
+        "stack": [
+          "Terraform",
+          "cloud IAM",
+          "networking",
+          "CI/CD",
+          "monitoring"
+        ]
+      }
+    },
+    "study_resources": {
+      "DevOps": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://roadmap.sh/devops"
+      },
+      "Docker": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.docker.com/get-started/"
+      },
+      "Kubernetes": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://kubernetes.io/docs/tutorials/"
+      },
+      "GitHub Actions": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.github.com/en/actions"
+      },
+      "Terraform": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://developer.hashicorp.com/terraform/tutorials"
+      },
+      "Prometheus": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://prometheus.io/docs/introduction/overview/"
+      },
+      "Linux": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://linuxjourney.com/"
+      }
+    }
+  }}

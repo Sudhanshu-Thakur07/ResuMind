@@ -1,0 +1,101 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pyc
+
+# ==========================
+# Virtual Environment
+# ==========================
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ==========================
+# Environment Variables (SECRET KEYS)
+# ==========================
+.env
+.env.*
+!.env.example
+
+# ==========================
+# Project-specific: single file summary (dev reference only)
+# ==========================
+single_summary_backend.py
+
+# ==========================
+# IDE & Editor Files
+# ==========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ==========================
+# OS Generated Files
+# ==========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==========================
+# Logs & Temp Files
+# ==========================
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# ==========================
+# Build & Distribution
+# ==========================
+node_modules/
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+
+# ==========================
+# Test & Coverage
+# ==========================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+
+# ==========================
+# Jupyter Notebooks (checkpoints)
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# FastEmbed / ML Model Cache
+# ==========================
+.cache/
+models/
+*.onnx
+*.bin
+
+# ==========================
+# Qdrant local storage (if running locally)
+# ==========================
+qdrant_storage/

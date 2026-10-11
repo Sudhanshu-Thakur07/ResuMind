@@ -1,0 +1,197 @@
+{
+  "Data Analyst⭐": {
+    "role": {
+      "title": "Data Analyst",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "SQL analytics, business intelligence, statistical analysis, dashboards and actionable reporting",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement sql analytics, business intelligence, statistical analysis, dashboards and actionable reporting.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "sql": [
+        "SELECT",
+        "JOIN",
+        "CTE",
+        "window functions",
+        "subqueries",
+        "query optimization"
+      ],
+      "data": [
+        "Excel/Sheets",
+        "pandas",
+        "data cleaning",
+        "EDA"
+      ],
+      "statistics": [
+        "descriptive statistics",
+        "hypothesis testing",
+        "A/B testing"
+      ],
+      "visualization": [
+        "Power BI/Tableau",
+        "chart selection",
+        "dashboard design"
+      ],
+      "business": [
+        "KPIs",
+        "cohort analysis",
+        "funnel analysis",
+        "stakeholder communication"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is a primary key?",
+      "2": "What is a foreign key?",
+      "3": "INNER JOIN versus LEFT JOIN?",
+      "4": "What is a CTE?",
+      "5": "What are window functions?",
+      "6": "ROW_NUMBER versus RANK?",
+      "7": "How do you find duplicates in SQL?",
+      "8": "How do you calculate a running total?",
+      "9": "How do you optimize a SQL query?",
+      "10": "What is normalization?",
+      "11": "How do you handle NULL values?",
+      "12": "What is a KPI?",
+      "13": "Metric versus dimension?",
+      "14": "What is cohort analysis?",
+      "15": "What is funnel analysis?",
+      "16": "What is retention?",
+      "17": "How do you calculate conversion rate?",
+      "18": "How do you identify an anomalous metric?",
+      "19": "Mean versus median?",
+      "20": "What is standard deviation?",
+      "21": "What is a confidence interval?",
+      "22": "What is a p-value?",
+      "23": "How does an A/B test work?",
+      "24": "Correlation versus causation?",
+      "25": "What is sampling bias?",
+      "26": "How do you clean messy data?",
+      "27": "How do you detect outliers?",
+      "28": "How do you handle missing values?",
+      "29": "What is EDA?",
+      "30": "How do you choose a chart?",
+      "31": "What makes a dashboard effective?",
+      "32": "How do you avoid misleading visualizations?",
+      "33": "How do you define a metric consistently?",
+      "34": "What is data reconciliation?",
+      "35": "How do you validate a report?",
+      "36": "How do you automate recurring analysis?",
+      "37": "How do you use pandas for analysis?",
+      "38": "How do you communicate uncertainty?",
+      "39": "How do you deal with conflicting stakeholder definitions?",
+      "40": "How would you analyze a sales decline?",
+      "41": "How would you analyze customer retention?",
+      "42": "How would you measure marketing performance?",
+      "43": "How would you design an executive dashboard?",
+      "44": "How would you investigate a sudden KPI change?",
+      "45": "How would you evaluate a new feature?",
+      "46": "How do you prioritize analysis requests?",
+      "47": "How do you document metric logic?",
+      "48": "How do you protect sensitive data?",
+      "49": "Design a complete analytics workflow.",
+      "50": "How do you turn analysis into a business recommendation?"
+    },
+    "projects": {
+      "1": {
+        "name": "Executive Business Intelligence Dashboard",
+        "description": "Build a KPI dashboard backed by SQL transformations, automated refreshes, drill-down analysis and documented metric definitions.",
+        "strong_features": [
+          "SQL",
+          "Power BI/Tableau",
+          "pandas",
+          "KPI design"
+        ],
+        "stack": [
+          "SQL",
+          "Power BI/Tableau",
+          "pandas",
+          "KPI design"
+        ]
+      },
+      "2": {
+        "name": "E-Commerce Customer Analytics",
+        "description": "Analyze acquisition, conversion, retention, cohorts, repeat purchases and customer lifetime value with reproducible SQL and dashboards.",
+        "strong_features": [
+          "cohort analysis",
+          "funnel analysis",
+          "SQL",
+          "dashboard"
+        ],
+        "stack": [
+          "cohort analysis",
+          "funnel analysis",
+          "SQL",
+          "dashboard"
+        ]
+      },
+      "3": {
+        "name": "Marketing Experiment Analyzer",
+        "description": "Build a reusable A/B test analysis workflow that validates data, computes statistical results and produces an executive-ready report.",
+        "strong_features": [
+          "A/B testing",
+          "statistics",
+          "Python",
+          "automated reporting"
+        ],
+        "stack": [
+          "A/B testing",
+          "statistics",
+          "Python",
+          "automated reporting"
+        ]
+      }
+    },
+    "study_resources": {
+      "SQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+      },
+      "Excel": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=Vl0H-qTclOg"
+      },
+      "Power BI": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi/"
+      },
+      "Tableau": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.tableau.com/learn/training"
+      },
+      "Python Data Analysis": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8"
+      },
+      "Statistics": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.khanacademy.org/math/statistics-probability"
+      }
+    }
+  }}

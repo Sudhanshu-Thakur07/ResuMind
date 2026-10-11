@@ -1,0 +1,207 @@
+{
+  "Cybersecurity Engineer⭐": {
+    "role": {
+      "title": "Cybersecurity Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Application, network and infrastructure security, threat modeling, detection and secure engineering",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement application, network and infrastructure security, threat modeling, detection and secure engineering.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "security": [
+        "CIA triad",
+        "threat modeling",
+        "risk assessment",
+        "security controls"
+      ],
+      "networking": [
+        "TCP/IP",
+        "DNS",
+        "HTTP",
+        "TLS",
+        "firewalls"
+      ],
+      "application_security": [
+        "OWASP Top 10",
+        "secure coding",
+        "authentication",
+        "authorization",
+        "input validation"
+      ],
+      "systems": [
+        "Linux",
+        "Windows fundamentals",
+        "processes",
+        "permissions"
+      ],
+      "tools": [
+        "Wireshark",
+        "Burp Suite",
+        "SIEM basics",
+        "vulnerability scanners"
+      ],
+      "engineering": [
+        "Python",
+        "Git",
+        "logging",
+        "incident response"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is the CIA triad?",
+      "2": "Threat versus vulnerability versus risk?",
+      "3": "What is attack surface?",
+      "4": "What is threat modeling?",
+      "5": "What is least privilege?",
+      "6": "What is defense in depth?",
+      "7": "What is authentication?",
+      "8": "What is authorization?",
+      "9": "What is MFA?",
+      "10": "How should passwords be stored?",
+      "11": "What is hashing?",
+      "12": "Hashing versus encryption?",
+      "13": "Symmetric versus asymmetric encryption?",
+      "14": "What is TLS?",
+      "15": "How does HTTPS protect data?",
+      "16": "What is a certificate?",
+      "17": "What is DNS security?",
+      "18": "What is a firewall?",
+      "19": "What is a WAF?",
+      "20": "What is network segmentation?",
+      "21": "What is SQL injection?",
+      "22": "How do you prevent SQL injection?",
+      "23": "What is XSS?",
+      "24": "How do you prevent XSS?",
+      "25": "What is CSRF?",
+      "26": "How do you prevent CSRF?",
+      "27": "What is SSRF?",
+      "28": "What is command injection?",
+      "29": "What is path traversal?",
+      "30": "What is insecure deserialization?",
+      "31": "What is session hijacking?",
+      "32": "What is rate limiting?",
+      "33": "What is secure secret management?",
+      "34": "What is vulnerability management?",
+      "35": "What is CVE?",
+      "36": "What is CVSS?",
+      "37": "What is penetration testing?",
+      "38": "What is a security incident?",
+      "39": "What are indicators of compromise?",
+      "40": "What is SIEM?",
+      "41": "What is EDR?",
+      "42": "What is phishing?",
+      "43": "How do you investigate suspicious logs?",
+      "44": "How do you respond to credential compromise?",
+      "45": "How do you secure an API?",
+      "46": "How do you secure cloud workloads?",
+      "47": "How would you perform a web application threat model?",
+      "48": "How would you design network segmentation?",
+      "49": "How would you investigate a suspected breach?",
+      "50": "Design a secure web application architecture."
+    },
+    "projects": {
+      "1": {
+        "name": "Secure Web Application Lab",
+        "description": "Build a deliberately vulnerable training application, identify OWASP risks, then implement secure fixes with automated security tests and documentation.",
+        "strong_features": [
+          "OWASP Top 10",
+          "Burp Suite",
+          "secure coding",
+          "security testing"
+        ],
+        "stack": [
+          "OWASP Top 10",
+          "Burp Suite",
+          "secure coding",
+          "security testing"
+        ]
+      },
+      "2": {
+        "name": "Security Monitoring Pipeline",
+        "description": "Collect application and system logs, normalize events, detect suspicious patterns and create alert workflows with an investigation dashboard.",
+        "strong_features": [
+          "SIEM concepts",
+          "Python",
+          "log analysis",
+          "detection rules"
+        ],
+        "stack": [
+          "SIEM concepts",
+          "Python",
+          "log analysis",
+          "detection rules"
+        ]
+      },
+      "3": {
+        "name": "API Security Gateway",
+        "description": "Build an API gateway with authentication, authorization, rate limiting, validation, audit logging and security monitoring.",
+        "strong_features": [
+          "FastAPI",
+          "JWT",
+          "rate limiting",
+          "RBAC",
+          "audit logs"
+        ],
+        "stack": [
+          "FastAPI",
+          "JWT",
+          "rate limiting",
+          "RBAC",
+          "audit logs"
+        ]
+      }
+    },
+    "study_resources": {
+      "OWASP": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://owasp.org/www-project-top-ten/"
+      },
+      "PortSwigger Academy": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://portswigger.net/web-security"
+      },
+      "Cybersecurity Roadmap": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://roadmap.sh/cyber-security"
+      },
+      "Wireshark": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.wireshark.org/docs/"
+      },
+      "Linux": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://linuxjourney.com/"
+      },
+      "NIST": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.nist.gov/cyberframework"
+      }
+    }
+  }}

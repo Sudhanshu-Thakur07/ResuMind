@@ -1,0 +1,210 @@
+{
+  "Cloud Security Engineer⭐": {
+    "role": {
+      "title": "Cloud Security Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Security architecture and controls for cloud identity, networking, workloads, data and DevSecOps",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement security architecture and controls for cloud identity, networking, workloads, data and devsecops.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "cloud": [
+        "AWS/GCP/Azure",
+        "IAM",
+        "VPC/VNet",
+        "storage",
+        "compute"
+      ],
+      "security": [
+        "least privilege",
+        "threat modeling",
+        "encryption",
+        "key management"
+      ],
+      "networking": [
+        "segmentation",
+        "security groups",
+        "firewalls",
+        "private endpoints"
+      ],
+      "devsecops": [
+        "SAST",
+        "DAST",
+        "dependency scanning",
+        "container scanning",
+        "CI/CD security"
+      ],
+      "monitoring": [
+        "cloud audit logs",
+        "SIEM",
+        "detection engineering"
+      ],
+      "compliance": [
+        "security policies",
+        "logging",
+        "backup",
+        "governance"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is cloud security?",
+      "2": "Shared responsibility model?",
+      "3": "What is IAM?",
+      "4": "User versus role versus policy?",
+      "5": "What is least privilege?",
+      "6": "How do you design IAM safely?",
+      "7": "What is MFA?",
+      "8": "What is a VPC?",
+      "9": "How do you segment cloud networks?",
+      "10": "Public versus private subnet?",
+      "11": "What is a security group?",
+      "12": "What is a network ACL?",
+      "13": "How do you secure object storage?",
+      "14": "What is encryption at rest?",
+      "15": "Encryption in transit?",
+      "16": "What is KMS?",
+      "17": "How do you manage secrets?",
+      "18": "What is key rotation?",
+      "19": "What is a private endpoint?",
+      "20": "What is a WAF?",
+      "21": "What is cloud logging?",
+      "22": "What are audit trails?",
+      "23": "What is a cloud security posture?",
+      "24": "What is CSPM?",
+      "25": "What is vulnerability management?",
+      "26": "What is container image scanning?",
+      "27": "What is SAST?",
+      "28": "What is DAST?",
+      "29": "What is dependency scanning?",
+      "30": "What is IaC scanning?",
+      "31": "How do you secure Terraform state?",
+      "32": "How do you prevent credential leakage?",
+      "33": "How do you detect public storage exposure?",
+      "34": "How do you handle cloud misconfiguration?",
+      "35": "What is zero trust?",
+      "36": "What is defense in depth?",
+      "37": "How do you secure Kubernetes?",
+      "38": "What is workload identity?",
+      "39": "How do you secure CI/CD?",
+      "40": "How do you investigate cloud audit logs?",
+      "41": "How do you respond to compromised credentials?",
+      "42": "How do you implement centralized security monitoring?",
+      "43": "How would you design a secure cloud landing zone?",
+      "44": "How would you secure a public API?",
+      "45": "How would you secure a data lake?",
+      "46": "How would you implement guardrails?",
+      "47": "How do you automate security remediation?",
+      "48": "How do you balance developer velocity and security?",
+      "49": "Design a secure multi-tier cloud architecture.",
+      "50": "Design a cloud incident-response workflow."
+    },
+    "projects": {
+      "1": {
+        "name": "Secure Cloud Landing Zone",
+        "description": "Design cloud accounts/projects, IAM boundaries, network segmentation, centralized logging, encryption, guardrails and automated compliance checks.",
+        "strong_features": [
+          "IAM",
+          "network segmentation",
+          "KMS",
+          "audit logging",
+          "Terraform"
+        ],
+        "stack": [
+          "IAM",
+          "network segmentation",
+          "KMS",
+          "audit logging",
+          "Terraform"
+        ]
+      },
+      "2": {
+        "name": "DevSecOps Pipeline",
+        "description": "Create a CI/CD pipeline that performs dependency, secret, IaC, SAST and container scans before deployment, with policy gates.",
+        "strong_features": [
+          "GitHub Actions",
+          "SAST",
+          "DAST",
+          "Trivy",
+          "Terraform"
+        ],
+        "stack": [
+          "GitHub Actions",
+          "SAST",
+          "DAST",
+          "Trivy",
+          "Terraform"
+        ]
+      },
+      "3": {
+        "name": "Cloud Detection and Response Platform",
+        "description": "Collect cloud audit events, create detection rules for suspicious access, enrich alerts and automate safe remediation actions.",
+        "strong_features": [
+          "audit logs",
+          "SIEM",
+          "detection engineering",
+          "Python",
+          "incident response"
+        ],
+        "stack": [
+          "audit logs",
+          "SIEM",
+          "detection engineering",
+          "Python",
+          "incident response"
+        ]
+      }
+    },
+    "study_resources": {
+      "AWS Security": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://aws.amazon.com/security/learn/"
+      },
+      "Google Cloud Security": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://cloud.google.com/security"
+      },
+      "Azure Security": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://learn.microsoft.com/en-us/training/paths/describe-security-capabilities-of-microsoft-azure/"
+      },
+      "OWASP": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://owasp.org/www-project-top-ten/"
+      },
+      "NIST": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      "Terraform": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://developer.hashicorp.com/terraform/tutorials"
+      }
+    }
+  }}

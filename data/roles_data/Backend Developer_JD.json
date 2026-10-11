@@ -1,0 +1,209 @@
+{
+  "Backend Developer⭐": {
+    "role": {
+      "title": "Backend Developer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "API development, databases, distributed services, authentication and reliable server-side systems",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement api development, databases, distributed services, authentication and reliable server-side systems.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "programming": [
+        "Python",
+        "OOP",
+        "async programming"
+      ],
+      "api": [
+        "FastAPI",
+        "REST",
+        "HTTP",
+        "OpenAPI",
+        "Pydantic"
+      ],
+      "databases": [
+        "PostgreSQL/MySQL",
+        "SQL",
+        "indexes",
+        "transactions",
+        "Redis"
+      ],
+      "engineering": [
+        "Git",
+        "testing",
+        "logging",
+        "security basics"
+      ],
+      "systems": [
+        "Linux",
+        "networking",
+        "caching",
+        "queues"
+      ],
+      "deployment": [
+        "Docker",
+        "CI/CD",
+        "cloud basics"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What happens when an HTTP request reaches a server?",
+      "2": "GET versus POST?",
+      "3": "PUT versus PATCH?",
+      "4": "What makes an API RESTful?",
+      "5": "What is idempotency?",
+      "6": "What is middleware?",
+      "7": "What is dependency injection?",
+      "8": "What is Pydantic?",
+      "9": "Why use async endpoints?",
+      "10": "When should you not use async?",
+      "11": "What is connection pooling?",
+      "12": "What is an index?",
+      "13": "Composite index versus single-column index?",
+      "14": "What is normalization?",
+      "15": "What is a transaction?",
+      "16": "What is isolation level?",
+      "17": "What is a deadlock?",
+      "18": "SQL JOIN types?",
+      "19": "What is N+1 query problem?",
+      "20": "How does Redis help backends?",
+      "21": "What is caching?",
+      "22": "What is cache-aside?",
+      "23": "What is a message broker?",
+      "24": "Why use background jobs?",
+      "25": "What is rate limiting?",
+      "26": "Authentication versus authorization?",
+      "27": "How does JWT work?",
+      "28": "How should passwords be stored?",
+      "29": "How do you validate input?",
+      "30": "What is CORS?",
+      "31": "How do you secure file uploads?",
+      "32": "How do you handle API versioning?",
+      "33": "How do you paginate results?",
+      "34": "How do you design consistent errors?",
+      "35": "How do you test an API?",
+      "36": "Unit versus integration tests?",
+      "37": "How do you mock external services?",
+      "38": "What should backend logs contain?",
+      "39": "How do you trace a request?",
+      "40": "Why use Docker?",
+      "41": "How do you manage environment variables?",
+      "42": "How do you deploy FastAPI?",
+      "43": "How do you scale a backend horizontally?",
+      "44": "What is a load balancer?",
+      "45": "How do you handle retries safely?",
+      "46": "What is a circuit breaker?",
+      "47": "How do you design a notification API?",
+      "48": "How do you design a payment API?",
+      "49": "How do you prevent duplicate orders?",
+      "50": "Design a production backend architecture."
+    },
+    "projects": {
+      "1": {
+        "name": "Production E-Commerce Backend",
+        "description": "Build catalog, cart, order, payment-state and user APIs with PostgreSQL, Redis caching, authentication, validation, background jobs and tests.",
+        "strong_features": [
+          "FastAPI",
+          "PostgreSQL",
+          "Redis",
+          "JWT",
+          "Docker"
+        ],
+        "stack": [
+          "FastAPI",
+          "PostgreSQL",
+          "Redis",
+          "JWT",
+          "Docker"
+        ]
+      },
+      "2": {
+        "name": "High-Throughput URL Shortener",
+        "description": "Build a short-link service with collision-safe IDs, caching, analytics, rate limits and horizontal-scaling support.",
+        "strong_features": [
+          "Redis",
+          "PostgreSQL",
+          "rate limiting",
+          "analytics",
+          "load balancing"
+        ],
+        "stack": [
+          "Redis",
+          "PostgreSQL",
+          "rate limiting",
+          "analytics",
+          "load balancing"
+        ]
+      },
+      "3": {
+        "name": "Notification Service",
+        "description": "Build a reliable email/SMS/push notification backend with queues, retries, templates, preferences and delivery tracking.",
+        "strong_features": [
+          "Celery",
+          "Redis",
+          "message queues",
+          "retry policies",
+          "observability"
+        ],
+        "stack": [
+          "Celery",
+          "Redis",
+          "message queues",
+          "retry policies",
+          "observability"
+        ]
+      }
+    },
+    "study_resources": {
+      "FastAPI": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://fastapi.tiangolo.com/tutorial/"
+      },
+      "SQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+      },
+      "PostgreSQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.postgresql.org/docs/current/tutorial.html"
+      },
+      "Redis": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://redis.io/docs/latest/develop/get-started/"
+      },
+      "Docker": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.docker.com/get-started/"
+      },
+      "System Design": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://github.com/donnemartin/system-design-primer"
+      }
+    }
+  }}

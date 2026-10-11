@@ -1,0 +1,205 @@
+{
+  "Data Scientist⭐": {
+    "role": {
+      "title": "Data Scientist",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Statistical analysis, experimentation, predictive modeling and data-driven decision support",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement statistical analysis, experimentation, predictive modeling and data-driven decision support.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "statistics": [
+        "probability",
+        "hypothesis testing",
+        "confidence intervals",
+        "distributions",
+        "A/B testing"
+      ],
+      "data": [
+        "SQL",
+        "pandas",
+        "NumPy",
+        "EDA",
+        "visualization",
+        "feature engineering"
+      ],
+      "machine_learning": [
+        "scikit-learn",
+        "regression",
+        "classification",
+        "clustering",
+        "model evaluation"
+      ],
+      "analytics": [
+        "business metrics",
+        "experimentation",
+        "causal reasoning",
+        "communication"
+      ],
+      "engineering": [
+        "Git",
+        "notebooks",
+        "testing",
+        "data pipelines"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "Mean versus median?",
+      "2": "What is variance?",
+      "3": "What is standard deviation?",
+      "4": "Explain conditional probability.",
+      "5": "What is Bayes theorem?",
+      "6": "What is a confidence interval?",
+      "7": "What is a p-value?",
+      "8": "Statistical significance versus practical significance?",
+      "9": "What is a null hypothesis?",
+      "10": "Type I versus Type II error?",
+      "11": "What is statistical power?",
+      "12": "How does an A/B test work?",
+      "13": "What is sampling bias?",
+      "14": "What is selection bias?",
+      "15": "Correlation versus causation?",
+      "16": "What is Simpson's paradox?",
+      "17": "How do you detect outliers?",
+      "18": "How do you handle missing data?",
+      "19": "What is data leakage?",
+      "20": "How do you perform EDA?",
+      "21": "How do you choose visualizations?",
+      "22": "When should you use median?",
+      "23": "What is linear regression?",
+      "24": "What assumptions does linear regression make?",
+      "25": "What is logistic regression?",
+      "26": "How do you evaluate classification?",
+      "27": "How do ROC-AUC and PR-AUC differ?",
+      "28": "What is cross-validation?",
+      "29": "What is regularization?",
+      "30": "How do you handle class imbalance?",
+      "31": "What is feature engineering?",
+      "32": "What is feature selection?",
+      "33": "PCA versus feature selection?",
+      "34": "What is clustering?",
+      "35": "How does k-means work?",
+      "36": "How do you choose k?",
+      "37": "What is a baseline model?",
+      "38": "How do you communicate model uncertainty?",
+      "39": "How do you reproduce an analysis?",
+      "40": "How do you optimize SQL?",
+      "41": "How would you build a churn analysis?",
+      "42": "How would you measure experiment impact?",
+      "43": "How do you detect metric anomalies?",
+      "44": "How do you build a forecasting model?",
+      "45": "How do you handle time-series leakage?",
+      "46": "How do you explain ML results to executives?",
+      "47": "How do you validate a business hypothesis?",
+      "48": "How do you design an analytics dataset?",
+      "49": "How would you investigate a revenue drop?",
+      "50": "Design an end-to-end data science project."
+    },
+    "projects": {
+      "1": {
+        "name": "Customer Churn Intelligence",
+        "description": "Analyze customer behavior, build a churn model, identify drivers, estimate retention impact and expose actionable segments through a dashboard.",
+        "strong_features": [
+          "SQL",
+          "EDA",
+          "classification",
+          "explainability",
+          "dashboard"
+        ],
+        "stack": [
+          "SQL",
+          "EDA",
+          "classification",
+          "explainability",
+          "dashboard"
+        ]
+      },
+      "2": {
+        "name": "Experimentation Analytics Platform",
+        "description": "Build an A/B testing analysis tool that validates experiment assumptions, calculates statistical tests, confidence intervals and practical impact.",
+        "strong_features": [
+          "A/B testing",
+          "statistics",
+          "SQL",
+          "automated reporting"
+        ],
+        "stack": [
+          "A/B testing",
+          "statistics",
+          "SQL",
+          "automated reporting"
+        ]
+      },
+      "3": {
+        "name": "Demand and Revenue Forecasting",
+        "description": "Build a forecasting workflow with baselines, time-aware validation, feature engineering, uncertainty analysis and business reporting.",
+        "strong_features": [
+          "time series",
+          "backtesting",
+          "pandas",
+          "visualization",
+          "forecasting"
+        ],
+        "stack": [
+          "time series",
+          "backtesting",
+          "pandas",
+          "visualization",
+          "forecasting"
+        ]
+      }
+    },
+    "study_resources": {
+      "Statistics": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.khanacademy.org/math/statistics-probability"
+      },
+      "Google ML": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://developers.google.com/machine-learning/crash-course"
+      },
+      "Data Analysis": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8"
+      },
+      "SQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+      },
+      "Scikit-learn": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://scikit-learn.org/stable/user_guide.html"
+      },
+      "Pandas": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://pandas.pydata.org/docs/getting_started/index.html"
+      }
+    }
+  }}

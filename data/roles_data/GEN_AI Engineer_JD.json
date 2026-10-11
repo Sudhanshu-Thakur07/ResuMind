@@ -1,0 +1,224 @@
+{"Generative AI / LLM Engineer ⭐": {
+    "role": {
+      "title": "Generative AI / LLM Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "LLM application engineering, transformers, RAG, agents, evaluation and inference",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement llm application engineering, transformers, rag, agents, evaluation and inference.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "programming": [
+        "Python",
+        "async programming",
+        "APIs"
+      ],
+      "llm": [
+        "transformers",
+        "tokenization",
+        "prompt engineering",
+        "structured outputs",
+        "function calling",
+        "LLM APIs"
+      ],
+      "rag": [
+        "chunking",
+        "embeddings",
+        "vector search",
+        "reranking",
+        "hybrid retrieval",
+        "RAG evaluation"
+      ],
+      "agents": [
+        "tool calling",
+        "planning",
+        "memory",
+        "guardrails"
+      ],
+      "backend": [
+        "FastAPI",
+        "Pydantic",
+        "streaming",
+        "authentication"
+      ],
+      "engineering": [
+        "Git",
+        "testing",
+        "Docker",
+        "logging",
+        "observability"
+      ],
+      "deployment": [
+        "model serving",
+        "GPU basics",
+        "cloud deployment",
+        "cost and latency optimization"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is a transformer?",
+      "2": "Explain self-attention.",
+      "3": "Why are positional encodings needed?",
+      "4": "Encoder versus decoder models?",
+      "5": "What is tokenization?",
+      "6": "What is an embedding?",
+      "7": "What is temperature?",
+      "8": "What is top-p sampling?",
+      "9": "What is prompt engineering?",
+      "10": "How do system and user messages differ?",
+      "11": "What is structured output?",
+      "12": "What is function calling?",
+      "13": "What is RAG?",
+      "14": "Why use RAG instead of fine-tuning?",
+      "15": "How would you choose chunk size?",
+      "16": "What causes poor retrieval?",
+      "17": "How does vector search work?",
+      "18": "Cosine similarity versus dot product?",
+      "19": "What is reranking?",
+      "20": "What is hybrid search?",
+      "21": "How do you evaluate retrieval?",
+      "22": "How do you evaluate generated answers?",
+      "23": "What is faithfulness?",
+      "24": "How do you reduce hallucination?",
+      "25": "What is context-window management?",
+      "26": "How do you handle long documents?",
+      "27": "What is prompt injection?",
+      "28": "How do you defend a RAG system against injection?",
+      "29": "What is an AI agent?",
+      "30": "Agent versus workflow?",
+      "31": "How does tool calling work?",
+      "32": "How do you limit agent permissions?",
+      "33": "How do you implement conversation memory?",
+      "34": "How do you stream LLM responses?",
+      "35": "How do you reduce LLM latency?",
+      "36": "How do you reduce token cost?",
+      "37": "When should you use a smaller model?",
+      "38": "When should you fine-tune?",
+      "39": "What is LoRA?",
+      "40": "What is quantization?",
+      "41": "How do you deploy an open-source LLM?",
+      "42": "What is GPU VRAM?",
+      "43": "How would you benchmark an LLM?",
+      "44": "How do you version prompts?",
+      "45": "How would you test an LLM application?",
+      "46": "How do you monitor production LLM failures?",
+      "47": "Design a production RAG chatbot.",
+      "48": "Design an enterprise AI agent.",
+      "49": "How would you protect sensitive documents?",
+      "50": "How would you build an LLM evaluation dataset?"
+    },
+    "projects": {
+      "1": {
+        "name": "Enterprise RAG Copilot",
+        "description": "Build a grounded document assistant with ingestion, semantic chunking, hybrid retrieval, reranking, citations, access control and automated RAG evaluation.",
+        "strong_features": [
+          "Qdrant",
+          "reranking",
+          "citations",
+          "evaluation",
+          "FastAPI",
+          "Docker"
+        ],
+        "stack": [
+          "Qdrant",
+          "reranking",
+          "citations",
+          "evaluation",
+          "FastAPI",
+          "Docker"
+        ]
+      },
+      "2": {
+        "name": "Agentic Research Assistant",
+        "description": "Build an agent that searches approved sources, calls tools, synthesizes evidence and produces a traceable research report with tool-use logs.",
+        "strong_features": [
+          "tool calling",
+          "guardrails",
+          "memory",
+          "observability",
+          "structured output"
+        ],
+        "stack": [
+          "tool calling",
+          "guardrails",
+          "memory",
+          "observability",
+          "structured output"
+        ]
+      },
+      "3": {
+        "name": "LLM Evaluation and Optimization Lab",
+        "description": "Create an evaluation platform comparing prompts and models for quality, latency, cost and hallucination rate using a fixed benchmark dataset.",
+        "strong_features": [
+          "LLM-as-judge",
+          "benchmarking",
+          "prompt versioning",
+          "cost tracking",
+          "regression tests"
+        ],
+        "stack": [
+          "LLM-as-judge",
+          "benchmarking",
+          "prompt versioning",
+          "cost tracking",
+          "regression tests"
+        ]
+      }
+    },
+    "study_resources": {
+      "Hugging Face NLP Course": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+      },
+      "Hugging Face Agents": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction"
+      },
+      "Transformers": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://huggingface.co/docs/transformers/index"
+      },
+      "PyTorch": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://pytorch.org/tutorials/"
+      },
+      "Qdrant": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://qdrant.tech/documentation/"
+      },
+      "FastAPI": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://fastapi.tiangolo.com/tutorial/"
+      },
+      "Full LLM Course": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g"
+      }
+    }
+  }}

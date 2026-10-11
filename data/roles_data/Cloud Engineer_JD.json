@@ -1,0 +1,213 @@
+{
+  "Cloud Engineer⭐": {
+    "role": {
+      "title": "Cloud Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Cloud infrastructure, networking, compute, storage, IAM, automation and reliability",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement cloud infrastructure, networking, compute, storage, iam, automation and reliability.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "cloud": [
+        "AWS/GCP/Azure",
+        "compute",
+        "object storage",
+        "managed databases",
+        "IAM"
+      ],
+      "networking": [
+        "TCP/IP",
+        "DNS",
+        "HTTP",
+        "VPC/VNet",
+        "load balancers",
+        "firewalls"
+      ],
+      "linux": [
+        "shell",
+        "processes",
+        "permissions",
+        "system troubleshooting"
+      ],
+      "automation": [
+        "Terraform basics",
+        "CLI",
+        "CI/CD"
+      ],
+      "containers": [
+        "Docker",
+        "Kubernetes fundamentals"
+      ],
+      "reliability": [
+        "monitoring",
+        "backups",
+        "scaling",
+        "disaster recovery"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is cloud computing?",
+      "2": "IaaS versus PaaS versus SaaS?",
+      "3": "What is a region?",
+      "4": "What is an availability zone?",
+      "5": "What is a VPC?",
+      "6": "Public versus private subnet?",
+      "7": "What is a route table?",
+      "8": "What is NAT?",
+      "9": "What is a security group?",
+      "10": "What is DNS?",
+      "11": "How does HTTPS work?",
+      "12": "What is a load balancer?",
+      "13": "Horizontal versus vertical scaling?",
+      "14": "What is auto scaling?",
+      "15": "Object storage versus block storage?",
+      "16": "What is a managed database?",
+      "17": "What is IAM?",
+      "18": "Role versus policy?",
+      "19": "Least privilege?",
+      "20": "What is a secret manager?",
+      "21": "What is high availability?",
+      "22": "What is fault tolerance?",
+      "23": "What is disaster recovery?",
+      "24": "RTO versus RPO?",
+      "25": "What is monitoring?",
+      "26": "Metrics versus logs versus traces?",
+      "27": "What is an SLO?",
+      "28": "What is infrastructure as code?",
+      "29": "What is Terraform?",
+      "30": "What is state in Terraform?",
+      "31": "What is Docker?",
+      "32": "Container versus VM?",
+      "33": "What is Kubernetes?",
+      "34": "Pod versus deployment?",
+      "35": "What is CI/CD?",
+      "36": "How do you manage cloud costs?",
+      "37": "How do you secure cloud storage?",
+      "38": "How do you rotate credentials?",
+      "39": "How do you debug network connectivity?",
+      "40": "How do you troubleshoot a failed deployment?",
+      "41": "How would you design a highly available API?",
+      "42": "How would you design a private database architecture?",
+      "43": "How would you deploy a web application?",
+      "44": "How would you handle traffic spikes?",
+      "45": "How would you implement backups?",
+      "46": "How would you design multi-zone infrastructure?",
+      "47": "How do you monitor cloud health?",
+      "48": "How do you prevent accidental public exposure?",
+      "49": "Design a production cloud architecture.",
+      "50": "How do you balance reliability, security and cost?"
+    },
+    "projects": {
+      "1": {
+        "name": "Highly Available Web Platform",
+        "description": "Deploy a containerized web application across multiple zones with load balancing, managed database, private networking, autoscaling and monitoring.",
+        "strong_features": [
+          "AWS/GCP/Azure",
+          "Docker",
+          "Terraform",
+          "load balancer",
+          "monitoring"
+        ],
+        "stack": [
+          "AWS/GCP/Azure",
+          "Docker",
+          "Terraform",
+          "load balancer",
+          "monitoring"
+        ]
+      },
+      "2": {
+        "name": "Cloud Data Processing Service",
+        "description": "Build an event-driven data processor using object storage, serverless/managed compute, queues, IAM and automated deployment.",
+        "strong_features": [
+          "object storage",
+          "queues",
+          "IAM",
+          "serverless",
+          "CI/CD"
+        ],
+        "stack": [
+          "object storage",
+          "queues",
+          "IAM",
+          "serverless",
+          "CI/CD"
+        ]
+      },
+      "3": {
+        "name": "Disaster Recovery Lab",
+        "description": "Design and implement backup, restore, failover and recovery procedures for a multi-tier application with measurable RTO/RPO targets.",
+        "strong_features": [
+          "backups",
+          "replication",
+          "Terraform",
+          "monitoring",
+          "recovery testing"
+        ],
+        "stack": [
+          "backups",
+          "replication",
+          "Terraform",
+          "monitoring",
+          "recovery testing"
+        ]
+      }
+    },
+    "study_resources": {
+      "AWS": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://aws.amazon.com/training/digital/"
+      },
+      "Google Cloud": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.cloudskillsboost.google/"
+      },
+      "Azure": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://learn.microsoft.com/en-us/training/azure/"
+      },
+      "Linux": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://linuxjourney.com/"
+      },
+      "Terraform": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://developer.hashicorp.com/terraform/tutorials"
+      },
+      "Docker": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.docker.com/get-started/"
+      },
+      "Kubernetes": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://kubernetes.io/docs/tutorials/"
+      }
+    }
+  }}

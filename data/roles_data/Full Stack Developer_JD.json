@@ -1,0 +1,209 @@
+{
+  "Full Stack Developer⭐": {
+    "role": {
+      "title": "Full Stack Developer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "End-to-end web application development across frontend, backend, databases and deployment",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement end-to-end web application development across frontend, backend, databases and deployment.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "frontend": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "state management",
+        "responsive design"
+      ],
+      "backend": [
+        "REST APIs",
+        "FastAPI/Node.js",
+        "authentication",
+        "validation"
+      ],
+      "databases": [
+        "SQL",
+        "PostgreSQL",
+        "schema design"
+      ],
+      "engineering": [
+        "Git",
+        "testing",
+        "debugging",
+        "security basics"
+      ],
+      "deployment": [
+        "Docker",
+        "CI/CD",
+        "cloud hosting",
+        "environment configuration"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is the DOM?",
+      "2": "How does browser rendering work?",
+      "3": "Flexbox versus Grid?",
+      "4": "What is responsive design?",
+      "5": "What is semantic HTML?",
+      "6": "What is event bubbling?",
+      "7": "var, let and const?",
+      "8": "Promises versus async/await?",
+      "9": "What is a closure?",
+      "10": "What is TypeScript?",
+      "11": "Why use React?",
+      "12": "What are React components?",
+      "13": "What are props and state?",
+      "14": "What are hooks?",
+      "15": "What is useEffect?",
+      "16": "Controlled versus uncontrolled inputs?",
+      "17": "How do you manage frontend state?",
+      "18": "What is client-side routing?",
+      "19": "How does fetch work?",
+      "20": "What is CORS?",
+      "21": "What is REST?",
+      "22": "How do frontend and backend communicate?",
+      "23": "What is JWT authentication?",
+      "24": "How do you protect routes?",
+      "25": "What is SQL indexing?",
+      "26": "How do you design a relational schema?",
+      "27": "What is a transaction?",
+      "28": "How do you validate forms?",
+      "29": "How do you handle API errors?",
+      "30": "How do you prevent XSS?",
+      "31": "How do you prevent CSRF?",
+      "32": "What is input sanitization?",
+      "33": "How do you upload files securely?",
+      "34": "What is caching?",
+      "35": "How do you optimize a slow page?",
+      "36": "What is lazy loading?",
+      "37": "How do you test frontend code?",
+      "38": "How do you test APIs?",
+      "39": "What is Docker?",
+      "40": "What is CI/CD?",
+      "41": "How do environment variables work?",
+      "42": "How do you deploy a full-stack app?",
+      "43": "How do you monitor frontend errors?",
+      "44": "How do you optimize database queries?",
+      "45": "How do you handle pagination?",
+      "46": "How do you design a dashboard?",
+      "47": "How do you handle real-time updates?",
+      "48": "How would you design an e-commerce app?",
+      "49": "How would you structure a full-stack project?",
+      "50": "How do you debug a production full-stack issue?"
+    },
+    "projects": {
+      "1": {
+        "name": "AI-Powered SaaS Dashboard",
+        "description": "Build a complete SaaS product with React, FastAPI, PostgreSQL, authentication, analytics dashboards and an AI feature exposed through a secure API.",
+        "strong_features": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "PostgreSQL",
+          "Docker"
+        ]
+      },
+      "2": {
+        "name": "Collaborative Project Manager",
+        "description": "Build a Trello-style application with teams, roles, real-time updates, comments, file attachments and audit history.",
+        "strong_features": [
+          "React",
+          "WebSockets",
+          "Redis",
+          "PostgreSQL",
+          "RBAC"
+        ],
+        "stack": [
+          "React",
+          "WebSockets",
+          "Redis",
+          "PostgreSQL",
+          "RBAC"
+        ]
+      },
+      "3": {
+        "name": "AI Customer Support Portal",
+        "description": "Build a customer portal with ticketing, knowledge-base search, AI-assisted replies, admin analytics and deployment automation.",
+        "strong_features": [
+          "React",
+          "FastAPI",
+          "RAG",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "stack": [
+          "React",
+          "FastAPI",
+          "RAG",
+          "PostgreSQL",
+          "Docker"
+        ]
+      }
+    },
+    "study_resources": {
+      "HTML CSS JS": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      "JavaScript": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+      },
+      "React": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://react.dev/learn"
+      },
+      "TypeScript": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.typescriptlang.org/docs/"
+      },
+      "FastAPI": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://fastapi.tiangolo.com/tutorial/"
+      },
+      "SQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+      },
+      "Git": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+      }
+    }
+  }}
