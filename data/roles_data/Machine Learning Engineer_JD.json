@@ -1,0 +1,222 @@
+{
+  "Machine Learning Engineer ⭐": {
+    "role": {
+      "title": "Machine Learning Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Production machine-learning systems, model development, experimentation and deployment",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement production machine-learning systems, model development, experimentation and deployment.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "programming": [
+        "Python",
+        "OOP",
+        "data structures"
+      ],
+      "data": [
+        "SQL",
+        "NumPy",
+        "pandas",
+        "EDA",
+        "feature engineering"
+      ],
+      "machine_learning": [
+        "regression",
+        "classification",
+        "clustering",
+        "ensemble methods",
+        "preprocessing",
+        "cross-validation",
+        "hyperparameter tuning",
+        "model evaluation",
+        "scikit-learn"
+      ],
+      "deep_learning": [
+        "neural networks",
+        "PyTorch",
+        "training loops",
+        "embeddings"
+      ],
+      "engineering": [
+        "Git",
+        "testing",
+        "Docker",
+        "logging",
+        "APIs"
+      ],
+      "deployment": [
+        "model serving",
+        "cloud basics",
+        "CI/CD",
+        "monitoring"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is the bias-variance tradeoff?",
+      "2": "How do you detect and prevent data leakage?",
+      "3": "How do you choose an evaluation metric?",
+      "4": "How does cross-validation work?",
+      "5": "How do you handle class imbalance?",
+      "6": "When should you standardize features?",
+      "7": "How do trees handle nonlinear relationships?",
+      "8": "Compare random forest and gradient boosting.",
+      "9": "What is regularization?",
+      "10": "Explain L1 versus L2 regularization.",
+      "11": "How does XGBoost work at a high level?",
+      "12": "How do you tune hyperparameters efficiently?",
+      "13": "What is early stopping?",
+      "14": "How do you handle missing values?",
+      "15": "How do you encode categorical variables?",
+      "16": "What is feature engineering?",
+      "17": "How do you detect outliers?",
+      "18": "What is calibration in classification?",
+      "19": "How do ROC-AUC and PR-AUC differ?",
+      "20": "How would you build a reproducible experiment?",
+      "21": "Explain gradient descent.",
+      "22": "What is backpropagation?",
+      "23": "Why can gradients vanish?",
+      "24": "What are batch size and learning rate?",
+      "25": "What is transfer learning?",
+      "26": "What is an embedding?",
+      "27": "How do you prevent overfitting in neural networks?",
+      "28": "When would you use PyTorch?",
+      "29": "How would you version datasets and models?",
+      "30": "What should a model registry contain?",
+      "31": "How would you serve a trained model?",
+      "32": "Batch inference versus online inference?",
+      "33": "How do you reduce inference latency?",
+      "34": "How do you monitor model drift?",
+      "35": "What is concept drift?",
+      "36": "How do you design a model retraining pipeline?",
+      "37": "How would you test an ML pipeline?",
+      "38": "What belongs in an ML feature pipeline?",
+      "39": "How would you deploy a model with FastAPI?",
+      "40": "Why use Docker for model serving?",
+      "41": "How do you secure model APIs?",
+      "42": "How do you handle failed predictions?",
+      "43": "How do you track experiments?",
+      "44": "What is MLflow used for?",
+      "45": "How would you optimize a slow model?",
+      "46": "How would you debug a sudden accuracy drop?",
+      "47": "How would you design an end-to-end fraud classifier?",
+      "48": "How would you deploy it at scale?",
+      "49": "What tradeoffs matter between accuracy, latency and cost?",
+      "50": "Design a production ML lifecycle."
+    },
+    "projects": {
+      "1": {
+        "name": "Real-Time Fraud Detection Engine",
+        "description": "Build a transaction-risk classifier with feature engineering, class-imbalance handling, probability calibration, model comparison and an API for real-time scoring.",
+        "strong_features": [
+          "class imbalance",
+          "feature pipeline",
+          "model registry",
+          "drift monitoring",
+          "FastAPI",
+          "Docker"
+        ],
+        "stack": [
+          "class imbalance",
+          "feature pipeline",
+          "model registry",
+          "drift monitoring",
+          "FastAPI",
+          "Docker"
+        ]
+      },
+      "2": {
+        "name": "Demand Forecasting Platform",
+        "description": "Build a forecasting service that ingests historical sales, creates time-based features, compares baseline and ML models, evaluates rolling windows and exposes forecasts through an API.",
+        "strong_features": [
+          "time-series validation",
+          "feature engineering",
+          "backtesting",
+          "batch inference",
+          "monitoring"
+        ],
+        "stack": [
+          "time-series validation",
+          "feature engineering",
+          "backtesting",
+          "batch inference",
+          "monitoring"
+        ]
+      },
+      "3": {
+        "name": "Customer Churn Prediction System",
+        "description": "Build a production-style churn pipeline from raw customer data through preprocessing, training, explainability, API serving and scheduled retraining.",
+        "strong_features": [
+          "explainability",
+          "data validation",
+          "model versioning",
+          "scheduled retraining",
+          "dashboard"
+        ],
+        "stack": [
+          "explainability",
+          "data validation",
+          "model versioning",
+          "scheduled retraining",
+          "dashboard"
+        ]
+      }
+    },
+    "study_resources": {
+      "Machine Learning": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://developers.google.com/machine-learning/crash-course"
+      },
+      "Scikit-learn": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://scikit-learn.org/stable/user_guide.html"
+      },
+      "Deep Learning": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      },
+      "PyTorch": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://pytorch.org/tutorials/beginner/basics/intro.html"
+      },
+      "ML Engineering": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://madewithml.com/"
+      },
+      "Git": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+      },
+      "Docker": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.docker.com/get-started/"
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "Data Engineer⭐": {
+    "role": {
+      "title": "Data Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Reliable data ingestion, transformation, storage, orchestration and analytics infrastructure",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement reliable data ingestion, transformation, storage, orchestration and analytics infrastructure.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "programming": [
+        "Python",
+        "SQL",
+        "data structures"
+      ],
+      "data": [
+        "pandas",
+        "data modeling",
+        "ETL/ELT",
+        "data quality"
+      ],
+      "databases": [
+        "PostgreSQL",
+        "indexes",
+        "partitioning",
+        "warehouses"
+      ],
+      "big_data": [
+        "Spark fundamentals",
+        "distributed processing"
+      ],
+      "pipelines": [
+        "Airflow",
+        "orchestration",
+        "batch and streaming"
+      ],
+      "cloud": [
+        "object storage",
+        "compute",
+        "IAM basics"
+      ],
+      "engineering": [
+        "Git",
+        "Docker",
+        "testing",
+        "monitoring"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "ETL versus ELT?",
+      "2": "What is a data pipeline?",
+      "3": "Batch versus streaming?",
+      "4": "What is data ingestion?",
+      "5": "What is idempotency in pipelines?",
+      "6": "What is schema evolution?",
+      "7": "What is data lineage?",
+      "8": "What is data quality?",
+      "9": "How do you validate incoming data?",
+      "10": "What is a data contract?",
+      "11": "What is normalization?",
+      "12": "When would you denormalize?",
+      "13": "What is a star schema?",
+      "14": "Fact versus dimension table?",
+      "15": "What is partitioning?",
+      "16": "What is indexing?",
+      "17": "What is a query execution plan?",
+      "18": "What is a data warehouse?",
+      "19": "Warehouse versus data lake?",
+      "20": "What is a lakehouse?",
+      "21": "What is columnar storage?",
+      "22": "Why use Parquet?",
+      "23": "How does Spark distribute work?",
+      "24": "What are Spark partitions?",
+      "25": "What is a shuffle?",
+      "26": "What is Airflow?",
+      "27": "What is a DAG?",
+      "28": "How do retries affect pipelines?",
+      "29": "How do you handle late-arriving data?",
+      "30": "What is CDC?",
+      "31": "What is incremental loading?",
+      "32": "How do you deduplicate data?",
+      "33": "How do you manage secrets?",
+      "34": "How do you monitor pipelines?",
+      "35": "What is SLA versus SLO?",
+      "36": "How do you test data pipelines?",
+      "37": "What is Great Expectations used for?",
+      "38": "How do you optimize a slow SQL query?",
+      "39": "How do you reduce cloud data costs?",
+      "40": "How do you secure a data platform?",
+      "41": "What is IAM?",
+      "42": "How do you handle PII?",
+      "43": "How would you design an analytics pipeline?",
+      "44": "How would you ingest millions of records daily?",
+      "45": "How would you design a streaming pipeline?",
+      "46": "How would you recover from a failed pipeline?",
+      "47": "How do you manage schema changes?",
+      "48": "How would you build a lakehouse?",
+      "49": "Design a production data platform.",
+      "50": "How do you balance freshness, cost and reliability?"
+    },
+    "projects": {
+      "1": {
+        "name": "Modern Analytics Data Platform",
+        "description": "Build an end-to-end platform ingesting transactional data into object storage, transforming it with Python/Spark, loading analytical tables and serving BI queries.",
+        "strong_features": [
+          "Python",
+          "SQL",
+          "Parquet",
+          "Spark",
+          "Airflow"
+        ],
+        "stack": [
+          "Python",
+          "SQL",
+          "Parquet",
+          "Spark",
+          "Airflow"
+        ]
+      },
+      "2": {
+        "name": "Real-Time Event Pipeline",
+        "description": "Build a streaming pipeline that consumes application events, validates schemas, aggregates metrics and writes analytics-ready data with monitoring.",
+        "strong_features": [
+          "Kafka",
+          "stream processing",
+          "schema validation",
+          "Docker",
+          "observability"
+        ],
+        "stack": [
+          "Kafka",
+          "stream processing",
+          "schema validation",
+          "Docker",
+          "observability"
+        ]
+      },
+      "3": {
+        "name": "Data Quality and Lineage Platform",
+        "description": "Build automated checks for freshness, completeness, uniqueness and schema changes, with lineage metadata and failure alerts.",
+        "strong_features": [
+          "Python",
+          "SQL",
+          "data contracts",
+          "Airflow",
+          "data quality"
+        ],
+        "stack": [
+          "Python",
+          "SQL",
+          "data contracts",
+          "Airflow",
+          "data quality"
+        ]
+      }
+    },
+    "study_resources": {
+      "Data Engineering": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=PHWLV8rB8s8"
+      },
+      "SQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+      },
+      "Airflow": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html"
+      },
+      "Spark": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://spark.apache.org/docs/latest/quick-start.html"
+      },
+      "Kafka": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://kafka.apache.org/quickstart"
+      },
+      "PostgreSQL": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.postgresql.org/docs/current/tutorial.html"
+      },
+      "Docker": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.docker.com/get-started/"
+      }
+    }
+  }}

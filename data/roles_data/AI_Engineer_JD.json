@@ -1,0 +1,299 @@
+{
+  "AI Engineer": {
+    "role": {
+      "title": "AI Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Machine Learning, Deep Learning, NLP, LLM applications, RAG and AI backend systems",
+      "objective": "Build, evaluate, deploy and maintain reliable AI-powered products."
+    },
+    "responsibilities": {
+      "1": "Develop ML and deep-learning solutions using Python.",
+      "2": "Prepare, clean and analyze structured and unstructured data.",
+      "3": "Train, validate and evaluate machine-learning models.",
+      "4": "Build NLP and transformer-based applications.",
+      "5": "Integrate LLM APIs and open-source models into applications.",
+      "6": "Design RAG pipelines with chunking, embeddings and vector search.",
+      "7": "Implement tool-calling and agentic workflows where appropriate.",
+      "8": "Build REST APIs for AI services using FastAPI.",
+      "9": "Write tests and maintain clean, modular production code.",
+      "10": "Containerize and deploy AI applications using Docker and cloud platforms.",
+      "11": "Monitor latency, cost, accuracy and failure cases.",
+      "12": "Document experiments, APIs, datasets and model decisions."
+    },
+    "required_skills": {
+      "programming": [
+        "Python",
+        "OOP",
+        "data structures",
+        "error handling",
+        "virtual environments"
+      ],
+      "data": [
+        "SQL",
+        "NumPy",
+        "pandas",
+        "data cleaning",
+        "EDA",
+        "feature engineering"
+      ],
+      "machine_learning": [
+        "regression",
+        "classification",
+        "clustering",
+        "preprocessing",
+        "cross-validation",
+        "model evaluation",
+        "scikit-learn"
+      ],
+      "deep_learning": [
+        "neural networks",
+        "backpropagation",
+        "PyTorch",
+        "training loops",
+        "embeddings"
+      ],
+      "nlp_llm": [
+        "NLP fundamentals",
+        "transformers",
+        "tokenization",
+        "LLM APIs",
+        "prompt engineering",
+        "structured output"
+      ],
+      "rag": [
+        "document ingestion",
+        "chunking",
+        "embeddings",
+        "vector databases",
+        "retrieval",
+        "reranking",
+        "RAG evaluation"
+      ],
+      "backend": [
+        "FastAPI",
+        "REST APIs",
+        "Pydantic",
+        "authentication basics",
+        "async fundamentals"
+      ],
+      "engineering": [
+        "Git",
+        "GitHub",
+        "testing",
+        "logging",
+        "Docker",
+        "environment variables"
+      ],
+      "deployment": [
+        "Linux basics",
+        "cloud deployment",
+        "CI/CD fundamentals",
+        "API monitoring"
+      ],
+      "databases": [
+        "relational databases",
+        "vector databases",
+        "basic schema design"
+      ]
+    },
+    "preferred_skills": [
+      "Hugging Face Transformers",
+      "Qdrant, FAISS or Pinecone",
+      "LangChain or LlamaIndex",
+      "Redis",
+      "MLflow",
+      "GitHub Actions",
+      "AWS, GCP or Azure basics",
+      "OpenTelemetry or similar observability tooling"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical AI applications.",
+      "portfolio": "At least 2 substantial projects with deployed demos or documented technical implementations."
+    },
+    "interview_questions": {
+      "1": "What is the difference between AI, machine learning and deep learning?",
+      "2": "Explain supervised, unsupervised and reinforcement learning.",
+      "3": "What is overfitting and how can you reduce it?",
+      "4": "Explain the bias-variance tradeoff.",
+      "5": "Why do we split data into training, validation and test sets?",
+      "6": "What is cross-validation and when should you use it?",
+      "7": "Explain precision, recall and F1-score.",
+      "8": "When is accuracy a misleading metric?",
+      "9": "How does logistic regression work?",
+      "10": "What is the difference between bagging and boosting?",
+      "11": "How does a decision tree choose a split?",
+      "12": "What is feature scaling and when is it necessary?",
+      "13": "How do you handle missing and categorical data?",
+      "14": "What is data leakage and how do you prevent it?",
+      "15": "Explain gradient descent.",
+      "16": "What is backpropagation?",
+      "17": "Why are activation functions needed?",
+      "18": "Compare ReLU, sigmoid and softmax.",
+      "19": "What causes vanishing and exploding gradients?",
+      "20": "What are epochs, batches and learning rate?",
+      "21": "How does dropout help neural networks?",
+      "22": "Why would you use PyTorch instead of a traditional ML library?",
+      "23": "What is an embedding?",
+      "24": "How does tokenization work in NLP?",
+      "25": "Explain the transformer architecture at a high level.",
+      "26": "What are self-attention and multi-head attention?",
+      "27": "What is the difference between encoder-only and decoder-only transformers?",
+      "28": "What is prompt engineering and when is it useful?",
+      "29": "What are temperature and top-p in LLM generation?",
+      "30": "How would you force an LLM to return valid structured JSON?",
+      "31": "What is RAG and why use it instead of relying only on an LLM?",
+      "32": "How would you choose a chunk size for a RAG system?",
+      "33": "What makes a good embedding model?",
+      "34": "How does vector similarity search work?",
+      "35": "Compare cosine similarity and Euclidean distance.",
+      "36": "What causes hallucinations in RAG systems and how would you reduce them?",
+      "37": "How would you evaluate retrieval quality separately from generation quality?",
+      "38": "What is reranking and when is it useful?",
+      "39": "What is an AI agent and how is it different from a chatbot?",
+      "40": "Explain tool calling and function calling.",
+      "41": "How would you design an AI service with FastAPI?",
+      "42": "How would you handle authentication and rate limiting for an AI API?",
+      "43": "How would you reduce LLM latency and API cost?",
+      "44": "How would you design logging and monitoring for an AI application?",
+      "45": "Why use Docker for an AI application?",
+      "46": "Explain Git branching, pull requests and merge conflicts.",
+      "47": "How would you deploy a FastAPI plus RAG application?",
+      "48": "How would you handle secrets such as API keys in production?",
+      "49": "Design a production-ready document-question-answering system.",
+      "50": "How would you debug an AI system whose answers suddenly became inaccurate?"
+    },
+    "projects": {
+      "1": {
+        "name": "Production RAG Knowledge Assistant",
+        "description": "Build a document intelligence platform that ingests PDFs and web documents, extracts and cleans content, creates semantic chunks, generates embeddings, stores them in a vector database, retrieves relevant passages and produces grounded answers with citations.",
+        "strong_features": [
+          "hybrid retrieval",
+          "reranking",
+          "source citations",
+          "conversation memory",
+          "RAG evaluation",
+          "FastAPI backend",
+          "Docker deployment",
+          "logging and latency metrics"
+        ],
+        "stack": [
+          "Python",
+          "FastAPI",
+          "Sentence Transformers",
+          "Qdrant",
+          "LLM API",
+          "Docker"
+        ]
+      },
+      "2": {
+        "name": "AI Resume and Job Description Analyzer",
+        "description": "Build an AI recruitment assistant that parses resumes and job descriptions, extracts skills and experience, compares candidate evidence against role requirements, identifies missing skills and generates targeted learning recommendations using a RAG knowledge base.",
+        "strong_features": [
+          "PDF parsing",
+          "skill extraction",
+          "semantic matching",
+          "RAG study resources",
+          "structured JSON output",
+          "evaluation dataset",
+          "FastAPI API",
+          "explainable recommendations"
+        ],
+        "stack": [
+          "Python",
+          "pandas",
+          "FastAPI",
+          "LLM API",
+          "embeddings",
+          "Qdrant",
+          "RAG"
+        ]
+      },
+      "3": {
+        "name": "Agentic Data and Automation Platform",
+        "description": "Build an AI agent that accepts business questions, selects approved tools, queries SQL data, performs Python-based analysis, generates charts or reports and returns an auditable answer with the executed actions and supporting data.",
+        "strong_features": [
+          "tool calling",
+          "SQL agent",
+          "Python analysis tool",
+          "guardrails",
+          "query validation",
+          "audit logs",
+          "role-based access",
+          "Docker deployment"
+        ],
+        "stack": [
+          "Python",
+          "FastAPI",
+          "SQL",
+          "Pandas",
+          "LLM API",
+          "Docker",
+          "GitHub Actions"
+        ]
+      }
+    },
+    "study_resources": {
+      "Python": {
+        "resource": "freeCodeCamp - Python for Beginners",
+        "url": "https://www.youtube.com/watch?v=eWRfhZUzrAc"
+      },
+      "SQL": {
+        "resource": "freeCodeCamp - SQL Full Course",
+        "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+      },
+      "NumPy_Pandas": {
+        "resource": "freeCodeCamp - Data Analysis with Python",
+        "url": "https://www.youtube.com/watch?v=r-uOLxNrNk8"
+      },
+      "Machine_Learning": {
+        "resource": "Google - Machine Learning Crash Course",
+        "url": "https://developers.google.com/machine-learning/crash-course"
+      },
+      "Scikit_Learn": {
+        "resource": "scikit-learn User Guide",
+        "url": "https://scikit-learn.org/stable/user_guide.html"
+      },
+      "Deep_Learning": {
+        "resource": "3Blue1Brown - Neural Networks",
+        "url": "https://www.youtube.com/watch?v=aircAruvnKk"
+      },
+      "PyTorch": {
+        "resource": "PyTorch - Learn the Basics",
+        "url": "https://pytorch.org/tutorials/beginner/basics/intro.html"
+      },
+      "NLP_Transformers": {
+        "resource": "Hugging Face - NLP Course",
+        "url": "https://huggingface.co/learn/nlp-course/chapter1/1"
+      },
+      "LLM_RAG": {
+        "resource": "Hugging Face - Agents Course",
+        "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction"
+      },
+      "Vector_Databases": {
+        "resource": "Qdrant Documentation and Tutorials",
+        "url": "https://qdrant.tech/documentation/"
+      },
+      "FastAPI": {
+        "resource": "FastAPI Official Tutorial",
+        "url": "https://fastapi.tiangolo.com/tutorial/"
+      },
+      "Git_GitHub": {
+        "resource": "freeCodeCamp - Git and GitHub for Beginners",
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+      },
+      "Docker": {
+        "resource": "Docker - Get Started",
+        "url": "https://docs.docker.com/get-started/"
+      },
+      "MLOps": {
+        "resource": "Made With ML - MLOps",
+        "url": "https://madewithml.com/"
+      },
+      "Deployment": {
+        "resource": "Google Cloud Skills Boost - Cloud Essentials",
+        "url": "https://www.cloudskillsboost.google/"
+      }
+    }
+  }
+}

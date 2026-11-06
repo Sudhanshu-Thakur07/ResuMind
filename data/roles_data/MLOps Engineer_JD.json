@@ -1,0 +1,219 @@
+{
+  "MLOps Engineer / ML Platform Engineer⭐": {
+    "role": {
+      "title": "MLOps Engineer / ML Platform Engineer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Infrastructure, automation and platform engineering for reliable machine-learning lifecycle management",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement infrastructure, automation and platform engineering for reliable machine-learning lifecycle management.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "ml": [
+        "model training",
+        "evaluation",
+        "experiment tracking",
+        "model registry"
+      ],
+      "platform": [
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "artifact storage"
+      ],
+      "data": [
+        "data validation",
+        "feature pipelines",
+        "dataset versioning"
+      ],
+      "automation": [
+        "Airflow",
+        "GitHub Actions",
+        "Terraform"
+      ],
+      "observability": [
+        "metrics",
+        "logs",
+        "traces",
+        "model drift",
+        "data drift"
+      ],
+      "cloud": [
+        "AWS/GCP/Azure",
+        "IAM",
+        "object storage",
+        "compute"
+      ],
+      "engineering": [
+        "Python",
+        "SQL",
+        "testing",
+        "APIs"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is MLOps?",
+      "2": "How is MLOps different from DevOps?",
+      "3": "What is reproducibility?",
+      "4": "How do you version datasets?",
+      "5": "How do you version models?",
+      "6": "What is experiment tracking?",
+      "7": "What is MLflow?",
+      "8": "What is a model registry?",
+      "9": "What is a feature store?",
+      "10": "What is a feature pipeline?",
+      "11": "What is data validation?",
+      "12": "What is schema validation?",
+      "13": "What is data drift?",
+      "14": "What is concept drift?",
+      "15": "How do you monitor model quality?",
+      "16": "What is model serving?",
+      "17": "Batch versus online inference?",
+      "18": "What is model rollout?",
+      "19": "What is canary deployment?",
+      "20": "What is shadow deployment?",
+      "21": "How do you automate retraining?",
+      "22": "How do you prevent bad models reaching production?",
+      "23": "What are model approval gates?",
+      "24": "How do you test ML pipelines?",
+      "25": "What is CI/CD for ML?",
+      "26": "Why use Docker?",
+      "27": "Why use Kubernetes?",
+      "28": "What is a model-serving endpoint?",
+      "29": "How do you scale inference?",
+      "30": "How do you reduce inference cost?",
+      "31": "How do you monitor latency?",
+      "32": "What should ML logs contain?",
+      "33": "What are traces useful for?",
+      "34": "How do you secure model artifacts?",
+      "35": "How do you manage API secrets?",
+      "36": "How do you build reproducible environments?",
+      "37": "What is infrastructure as code?",
+      "38": "Why use Terraform?",
+      "39": "What is orchestration?",
+      "40": "What is an Airflow DAG?",
+      "41": "How do retries affect ML workflows?",
+      "42": "How do you handle failed training jobs?",
+      "43": "How do you manage GPU resources?",
+      "44": "How do you optimize model deployment?",
+      "45": "How would you build a model platform?",
+      "46": "How would you design continuous training?",
+      "47": "How would you design a model rollback system?",
+      "48": "How would you detect production model degradation?",
+      "49": "Design a complete ML platform.",
+      "50": "How do you balance reliability, cost and developer velocity?"
+    },
+    "projects": {
+      "1": {
+        "name": "End-to-End ML Platform",
+        "description": "Build a platform that ingests versioned data, runs reproducible training, tracks experiments, registers approved models and deploys them through automated CI/CD.",
+        "strong_features": [
+          "MLflow",
+          "Docker",
+          "Kubernetes",
+          "GitHub Actions",
+          "model registry"
+        ],
+        "stack": [
+          "MLflow",
+          "Docker",
+          "Kubernetes",
+          "GitHub Actions",
+          "model registry"
+        ]
+      },
+      "2": {
+        "name": "Continuous Training Pipeline",
+        "description": "Build scheduled data validation, training, evaluation and approval workflows with automatic rollback when quality gates fail.",
+        "strong_features": [
+          "Airflow",
+          "Python",
+          "data validation",
+          "model evaluation",
+          "CI/CD"
+        ],
+        "stack": [
+          "Airflow",
+          "Python",
+          "data validation",
+          "model evaluation",
+          "CI/CD"
+        ]
+      },
+      "3": {
+        "name": "Model Observability Platform",
+        "description": "Build monitoring for prediction latency, errors, input drift, output distribution and model quality, with alerts and investigation dashboards.",
+        "strong_features": [
+          "Prometheus",
+          "Grafana",
+          "drift detection",
+          "logging",
+          "metrics"
+        ],
+        "stack": [
+          "Prometheus",
+          "Grafana",
+          "drift detection",
+          "logging",
+          "metrics"
+        ]
+      }
+    },
+    "study_resources": {
+      "Made With ML": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://madewithml.com/"
+      },
+      "MLflow": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://mlflow.org/docs/latest/ml/getting-started/"
+      },
+      "Kubernetes": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://kubernetes.io/docs/tutorials/"
+      },
+      "Docker": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.docker.com/get-started/"
+      },
+      "Airflow": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html"
+      },
+      "Terraform": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://developer.hashicorp.com/terraform/tutorials"
+      },
+      "GitHub Actions": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://docs.github.com/en/actions"
+      }
+    }
+  }
+}

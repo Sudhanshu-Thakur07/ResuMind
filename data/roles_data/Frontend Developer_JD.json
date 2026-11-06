@@ -1,0 +1,208 @@
+{
+  "Frontend Developer⭐": {
+    "role": {
+      "title": "Frontend Developer",
+      "level": "Intern / Entry-Level / Fresher",
+      "focus": "Accessible, responsive and performant web interfaces using modern JavaScript/TypeScript frameworks",
+      "objective": "Build, ship, test and maintain reliable production-grade systems in this specialization."
+    },
+    "responsibilities": {
+      "1": "Design and implement accessible, responsive and performant web interfaces using modern javascript/typescript frameworks.",
+      "2": "Translate requirements into maintainable technical solutions.",
+      "3": "Write clean, modular and testable code.",
+      "4": "Work with databases, APIs and production infrastructure relevant to the role.",
+      "5": "Debug failures using logs, metrics and systematic root-cause analysis.",
+      "6": "Use Git and collaborative development practices.",
+      "7": "Automate repetitive engineering and deployment workflows.",
+      "8": "Apply security, reliability and performance best practices.",
+      "9": "Document architecture, decisions and operational procedures.",
+      "10": "Deploy solutions and monitor them in realistic environments.",
+      "11": "Measure quality and improve systems based on evidence.",
+      "12": "Collaborate with engineers, product stakeholders and data teams."
+    },
+    "required_skills": {
+      "web": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "HTTP",
+        "browser APIs"
+      ],
+      "frameworks": [
+        "React",
+        "component architecture",
+        "hooks",
+        "routing",
+        "state management"
+      ],
+      "ui": [
+        "responsive design",
+        "accessibility",
+        "design systems",
+        "forms"
+      ],
+      "performance": [
+        "Core Web Vitals",
+        "lazy loading",
+        "code splitting",
+        "caching"
+      ],
+      "engineering": [
+        "Git",
+        "testing",
+        "debugging",
+        "security basics"
+      ]
+    },
+    "preferred_skills": [
+      "Cloud fundamentals",
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Testing",
+      "Observability",
+      "System design"
+    ],
+    "qualifications": {
+      "education": "Computer Science, Software Engineering, AI/ML, Data or related field; strong equivalent self-learning is acceptable.",
+      "experience": "Projects, internships, open-source contributions or practical engineering work.",
+      "portfolio": "At least 2 substantial projects with documented technical decisions and a deployed or reproducible implementation."
+    },
+    "interview_questions": {
+      "1": "What is semantic HTML?",
+      "2": "How does the DOM work?",
+      "3": "What is CSS specificity?",
+      "4": "Flexbox versus Grid?",
+      "5": "What is responsive design?",
+      "6": "What are media queries?",
+      "7": "What is event bubbling?",
+      "8": "What is event delegation?",
+      "9": "var versus let versus const?",
+      "10": "What is a closure?",
+      "11": "What is a Promise?",
+      "12": "How does async/await work?",
+      "13": "What is the event loop?",
+      "14": "What is TypeScript?",
+      "15": "Why use TypeScript?",
+      "16": "What is React?",
+      "17": "What is a component?",
+      "18": "Props versus state?",
+      "19": "What are hooks?",
+      "20": "How does useEffect work?",
+      "21": "What is controlled input?",
+      "22": "What is client-side routing?",
+      "23": "How do you manage global state?",
+      "24": "What is memoization?",
+      "25": "How do you prevent unnecessary renders?",
+      "26": "What is lazy loading?",
+      "27": "What is code splitting?",
+      "28": "What are Core Web Vitals?",
+      "29": "How do you optimize images?",
+      "30": "How do you improve accessibility?",
+      "31": "What is ARIA?",
+      "32": "How do you handle keyboard navigation?",
+      "33": "How do you validate forms?",
+      "34": "How do you handle API errors?",
+      "35": "What is CORS?",
+      "36": "How do you prevent XSS?",
+      "37": "How do you store authentication safely?",
+      "38": "How do you test React components?",
+      "39": "Unit versus end-to-end tests?",
+      "40": "How do you debug browser performance?",
+      "41": "How do you optimize a large list?",
+      "42": "How do you handle responsive tables?",
+      "43": "How do you design reusable components?",
+      "44": "How do you structure a frontend project?",
+      "45": "How would you build a dashboard?",
+      "46": "How would you build a real-time interface?",
+      "47": "How do you monitor frontend errors?",
+      "48": "How do you deploy a frontend?",
+      "49": "Design a production React application.",
+      "50": "How do you balance UX, performance and maintainability?"
+    },
+    "projects": {
+      "1": {
+        "name": "Production Analytics Dashboard",
+        "description": "Build a responsive dashboard with authentication, reusable components, charts, filtering, pagination, API integration and accessibility.",
+        "strong_features": [
+          "React",
+          "TypeScript",
+          "charts",
+          "responsive UI",
+          "testing"
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "charts",
+          "responsive UI",
+          "testing"
+        ]
+      },
+      "2": {
+        "name": "Real-Time Collaboration UI",
+        "description": "Build a collaborative interface with presence, live updates, optimistic UI, conflict states and offline-aware UX.",
+        "strong_features": [
+          "React",
+          "WebSockets",
+          "state management",
+          "optimistic UI"
+        ],
+        "stack": [
+          "React",
+          "WebSockets",
+          "state management",
+          "optimistic UI"
+        ]
+      },
+      "3": {
+        "name": "AI Chat Interface",
+        "description": "Build a polished streaming AI interface with citations, conversation history, file upload, error states and responsive accessibility.",
+        "strong_features": [
+          "React",
+          "TypeScript",
+          "streaming",
+          "RAG citations",
+          "accessibility"
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "streaming",
+          "RAG citations",
+          "accessibility"
+        ]
+      }
+    },
+    "study_resources": {
+      "Responsive Web Design": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      "JavaScript": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+      },
+      "React": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://react.dev/learn"
+      },
+      "TypeScript": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.typescriptlang.org/docs/"
+      },
+      "Web Accessibility": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://web.dev/learn/accessibility/"
+      },
+      "Web Performance": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://web.dev/learn/performance/"
+      },
+      "Git": {
+        "resource": "Free official or widely used learning resource",
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+      }
+    }
+  }}
